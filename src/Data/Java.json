@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "collectionName": "Collection A",
+      "documents": [
+        { "id": "Doc1", "Body": "element body 1" },
+        { "id": "Doc2", "Body": "element body 2" }
+      ]
+    },
+    {
+      "collectionName": "Collection B",
+      "documents": [
+        { "id": "Doc3", "Body": "element body 3" }
+      ]
+    },
+    {
+      "collectionName": "Collection C",
+      "documents": [
+        { "id": "Doc4", "Body": "element body 4" }
+      ]
+    }
+  ]
+}

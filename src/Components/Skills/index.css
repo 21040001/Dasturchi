@@ -1,0 +1,62 @@
+.skill {
+    background-color: #121212;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill .navbar {
+    height: 30px;
+    padding: 20px 20px;
+    background: repeating-linear-gradient(
+        45deg, 
+        #121212 0px, #121212 20px, 
+        burlywood 20px, burlywood 40px
+    );
+}
+
+.skill span {
+    color: burlywood;
+}
+
+.skill .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ortaya hizala */
+    text-align: center; /* Metni ortala */
+}
+
+.skill .body h3 {
+    color: aliceblue !important;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.skill .skills {
+    display: flex;
+    flex-wrap: wrap; /* Kartlar taşarsa alt satıra geçsin */
+    justify-content: space-around; /* Eşit yayılma */
+    margin-top: 20px;
+    gap: 20px;
+    width: 100%;
+}
+
+.skillCard {
+    flex: 1; /* Kartların eşit genişlikte olmasını sağlar */
+    min-width: 250px; /* Minimum genişlik */
+    max-width: 300px; /* Maksimum genişlik */
+    padding: 20px;
+    text-align: center;
+}
+
+.skillCard img {
+    height: 100px;
+    width: 100px;
+}
+
+.skillCard p {
+    color: white;
+}
+.skillCard h5{
+    color: burlywood;
+}

@@ -1,0 +1,135 @@
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #121212;
+    padding: 50px;
+    padding-top: 20px !important;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+  .contact .navbar {
+    height: 30px;
+    padding: 20px 20px;
+    background: repeating-linear-gradient(
+        45deg, 
+        #121212 0px, #121212 20px, 
+        burlywood 20px, burlywood 40px
+    );
+}
+  .contact-box {
+    width: 45%;
+    padding: 20px;
+  }
+  
+  .contact-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-box p {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  .contact-info h4 {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .social-icons i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons i:hover {
+    color: burlywood;
+  }
+  
+  .contact-form {
+    width: 50%;
+    background: #13133a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .contact-form h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #1a1a4f;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .contact-form textarea {
+    height: 80px;
+    resize: none;
+  }
+  
+  .contact-form button {
+    width: 100%;
+    padding: 10px;
+    background: burlywood;
+    border: none;
+    border-radius: 5px;
+    color: #0d0d2b;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background: #d4a373;
+  }
+
+  .form-box {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 50%;
+    text-align: center;
+  }
+
+  .form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-box input,
+  .form-box textarea {
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+    max-width: 100%;
+  }
+
+  .form-box button {
+    padding: 10px;
+    width: 300px;
+    max-width: 100%;
+  }
+  
+  .contact-container h2, .contact-container h4{
+    color: burlywood;
+  }

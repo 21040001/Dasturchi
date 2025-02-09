@@ -1,0 +1,52 @@
+.home {
+    background-color: #121212;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.home .navbar {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.home .navbar div {
+    display: flex;
+    gap: 20px;
+}
+.navbar span:hover{
+    color: burlywood;
+}
+.navbar div span {
+    cursor: pointer;
+  }
+
+.home .navbar .logo {
+    height: 20px;
+    width: 60px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 2px;
+}
+.home .body{
+    display: flex;
+    color: #FFFFFF;
+    height: 90vh;
+}
+.home .body .text{
+    padding-left: 50px;
+    width: 60%;
+    align-items: center;
+    padding-top: 10%; 
+    justify-content: center;
+}
+.home .body .imgCart img{
+    height: 100%;
+}
+.home .body  span{
+    color: burlywood;
+}

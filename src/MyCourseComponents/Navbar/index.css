@@ -1,0 +1,8 @@
+.Navbar{
+    background: burlywood;
+}
+.Navbar span{
+    padding: 10px;
+    font-size: large;
+    color: black;
+}

@@ -1,0 +1,75 @@
+.project {
+    background-color: #121212;
+    padding-top: 0px !important;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project .navbar {
+    height: 30px;
+    padding: 20px 20px;
+    background: repeating-linear-gradient(
+        45deg, 
+        #121212 0px, #121212 20px, 
+        burlywood 20px, burlywood 40px
+    );
+}
+.project span{
+    color: burlywood;
+}
+.project .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align h3 */
+    text-align: center; /* Center text horizontally */
+}
+.project .body h3{
+    color: aliceblue;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.project .body .card{
+    flex: 1; /* Kartların eşit genişlikte olmasını sağlar */
+    min-width: 250px; /* Minimum genişlik */
+    max-width: 300px; /* Maksimum genişlik */
+    padding: 20px;
+    text-align: center;
+    background: #121212;
+    color: aliceblue;
+}
+.project .body .card p{
+    font-size: 15px;
+}
+.project .body .card a{
+    position: absolute;
+    bottom: 10px;
+    left: 50%; 
+    transform: translateX(-50%);
+}
+.project .body .card:hover{
+    background-color: rgb(26, 23, 19);
+    width: 203px;
+    h4{
+        color: rgb(0, 0, 0);
+    }
+}
+.project .cards {
+    display: flex;
+    flex-wrap: wrap; /* Kartlar taşarsa alt satıra geçsin */
+    justify-content: space-around; /* Eşit yayılma */
+    margin-top: 20px;
+    gap: 20px;
+    width: 100%;}
+.card h4 {
+    color: rgb(239, 166, 71);;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

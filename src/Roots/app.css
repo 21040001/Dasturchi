@@ -1,0 +1,18 @@
+/* app.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Tüm ekranı kapsar */
+  }
+  
+  #root {
+    height: 100%; /* React uygulaması için kök eleman */
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column; /* İçerikleri dikey hizalar */
+    height: 100%; /* App bileşeni tüm yüksekliği kaplar */
+    background-color: #f0f0f0; /* İsteğe bağlı: Arkaplan rengi */
+  }
+  

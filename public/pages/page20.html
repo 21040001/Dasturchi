@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Takrorlanuvchi Metodlar</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .inCode {
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Takrorlanuvchi Metodlar</h1>
+    <p>
+        Takrorlanuvchi metodlar, bir metod ichida o'zini o'zi chaqirishni anglatadi. Bu dasturlash konsepti murakkab
+        muammolarni yechishda, ayniqsa rekursiv bo'lgan masalalarda, qulaylik yaratadi. Masalan, faktorial va Fibonachchi
+        ketma-ketligini hisoblashda keng qo'llaniladi.
+        <br /><br />
+        Java'da takrorlanuvchi metodlarni qanday amalga oshirish haqida oddiy bir misol keltiraman:
+    </p>
+    <pre><code class="java">
+        <code class="inCode">public class</code> RecursionExample {
+            <code class="inCode">public int</code> factorial(<code class="inCode">int</code> n) {
+                <code class="inCode">if</code> (n <= 1) {
+                    <code class="inCode">return</code> 1;
+                } <code class="inCode">else</code> {
+                    <code class="inCode">return</code> n * factorial(n - 1);
+                }
+            }
+            
+            <code class="inCode">public int</code> fibonacci(<code class="inCode">int</code> n) {
+                <code class="inCode">if</code> (n <= 1) {
+                    <code class="inCode">return</code> n;
+                } <code class="inCode">else</code> {
+                    <code class="inCode">return</code> fibonacci(n - 1) + fibonacci(n - 2);
+                }
+            }
+        }
+
+        <code class="inCode">public class</code> Main {
+            <code class="inCode">public static void</code> main(String[] args) {
+                <code class="inCode">RecursionExample</code> recursion = <code class="inCode">new</code> RecursionExample();
+                System.out.println("5! = " + recursion.factorial(5));
+                System.out.println("Fibonacci(5) = " + recursion.fibonacci(5));
+            }
+        }
+        
+    </code></pre>
+    <p>
+        Ushbu misolda, <code class="inCode">factorial</code> va <code class="inCode">fibonacci</code> usullari
+        rekursiv metodlarga misol bo'ladi. <code class="inCode">factorial</code> metodi berilgan <code class="inCode">n</code> 
+        qiymatining faktorialini hisoblaydi va <code class="inCode">fibonacci</code> metodi berilgan <code class="inCode">n</code> qiymatiga mos keladigan
+        Fibonachchi ketma-ketligi elementini qaytaradi. Takrorlanuvchi metodlar orqali murakkab muammolarni sodda va
+        tushunarli shaklda yechish mumkin.
+    </p>
+</body>
+
+</html>

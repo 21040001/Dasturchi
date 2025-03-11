@@ -1,0 +1,59 @@
+.lastPosts {
+    gap: 10px;
+    display: flex;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.lastPosts .left {
+    display: grid;
+    gap: 10px;
+    width: 60%;
+}
+
+.lastPosts .left .rowFirst {
+   
+}
+
+.lastPosts .left .rowSecond {
+    display: flex;
+    gap: 10px;
+}
+
+.lastPosts .left .rowFirst .mostHugeImg {
+    height: 500px;
+    background-color: black;
+}
+
+.lastPosts .left .rowSecond .leftFirstImg {
+    height: 200px;
+    width: 50%;
+    background-color: black;
+}
+
+.lastPosts .left .rowSecond .leftSecondImg {
+    width: 50%;
+    background-color: black;
+    height: 200px;
+}
+
+.lastPosts .right {
+    display: grid;
+    gap: 10px;
+    width: 40%;
+}
+
+.lastPosts .right .rightFirstImg {
+    background-color: black;
+    height: 233px;
+}
+
+.lastPosts .right .rightSecondImg {
+    height: 233px;
+    background-color: black;
+}
+
+.lastPosts .right .rightThridImg {
+    height: 231px;
+    background-color: black;
+}

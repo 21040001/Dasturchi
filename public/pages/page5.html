@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Java O'zgaruvchilar va Ma'lumot Turlari</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        .inCode{
+            color: #d63384;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>O'zgaruvchilar va Ma'lumot Turlari</h1>
+    <p>Java dasturlash tilida o'zgaruvchilar va ma'lumot turlari asosiy tushunchalardan biridir. Mana ular haqida
+        batafsil tushuntirish:</p>
+
+    <h5>O'zgaruvchilar (Variables)</h5>
+    <p>O'zgaruvchilar - bu dasturda qiymatni saqlash uchun ishlatiladigan nomlangan xotira joylari. O'zgaruvchini
+        yaratish uchun dasturchi unga ma'lum bir ma'lumot turi berishi kerak.</p>
+
+    <h5>O'zgaruvchilarni e'lon qilish va boshlang'ich qiymat berish</h5>
+    <pre><code class="java">
+        <code class="inCode">int</code> yosh; // <code class="inCode">int</code> turi o'zgaruvchi e'lon qilinadi
+        yosh = 25; // O'zgaruvchiga boshlang'ich qiymat beriladi
+
+        // Yoki bitta qatorda e'lon qilish va boshlang'ich qiymat berish mumkin
+        <code class="inCode">int</code> temperatura = 30;
+    </code></pre>
+
+    <h5>Ma'lumot Turlari (Data Types)</h5>
+    <p>Java'da ma'lumot turlari ikki turga bo'linadi: asosiy (primitive) va murojatli (reference) ma'lumot turlari.</p>
+
+    <h5>Asosiy (Primitive) Ma'lumot Turlari</h5>
+    <p>Bu turlar Java'da oldindan aniqlangan va xotirada aniq o'lchamda joy oladi. Quyida asosiy ma'lumot turlarining
+        ba'zi misollari:</p>
+    <ul>
+        <li><code>byte</code>: 8-bitli o'zgaruvchi. Qiymat oralig'i -128 dan 127 gacha.</li>
+        <li><code>short</code>: 16-bitli o'zgaruvchi. Qiymat oralig'i -32,768 dan 32,767 gacha.</li>
+        <li><code>int</code>: 32-bitli o'zgaruvchi. Qiymat oralig'i -2^31 dan 2^31-1 gacha.</li>
+        <li><code>long</code>: 64-bitli o'zgaruvchi. Qiymat oralig'i -2^63 dan 2^63-1 gacha.</li>
+        <li><code>float</code>: 32-bitli o'zgaruvchi. Qaytarmas sonlar uchun (floating-point).</li>
+        <li><code>double</code>: 64-bitli o'zgaruvchi. Qaytarmas sonlar uchun (floating-point).</li>
+        <li><code>boolean</code>: faqat <code>true</code> yoki <code>false</code> qiymatga ega bo'lishi mumkin.</li>
+        <li><code>char</code>: 16-bitli o'zgaruvchi. Yagona Unicode belgi.</li>
+    </ul>
+
+    <h5>Murojatli (Reference) Ma'lumot Turlari</h5>
+    <p>Bu turlar ob'ektlarni ifodalaydi va xotirada o'zgaruvchining haqiqiy ma'lumot manzilini saqlaydi. Ular sinf,
+        interfeys yoki massiv ko'rinishida bo'lishi mumkin. Misollar:</p>
+    <ul>
+        <li><code>String</code>: matnli qiymatlarni saqlash uchun ishlatiladi.</li>
+        <li>Massivlar: bir xil turdagi elementlar to'plami (masalan, <code>int[]</code>, <code>String[]</code>).</li>
+    </ul>
+
+    <h5>Misol:</h5>
+    <pre><code class="java">
+        <code class="inCode">public class</code> Main {
+            <code class="inCode">public static void</code> main(<code>String</code>[] args) {
+                // Asosiy ma'lumot turlari
+                <code class="inCode">int</code> yosh = 25;
+                <code class="inCode">double</code> narx = 19.99;
+                <code class="inCode">boolean</code> studentmi = <code>true</code>;
+                <code class="inCode">char</code> belgi = 'A';
+
+                // Murojatli ma'lumot turlari
+                <code class="inCode">String</code> ism = "Ahmad";
+                <code class="inCode">int</code>[] sonlar = {1, 2, 3, 4, 5};
+
+                // Natijalarni chiqarish
+                System.out.println("Yosh: " + yosh);
+                System.out.println("Narx: " + narx);
+                System.out.println("Studentmi: " + studentmi);
+                System.out.println("Belgi: " + belgi);
+                System.out.println("Ism: " + ism);
+                System.out.print("Sonlar: ");
+                <code class="inCode">for</code> (<code class="inCode">int</code> son : sonlar) {
+                    System.out.print(son + " ");
+                }
+            }
+        }
+    </code></pre>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

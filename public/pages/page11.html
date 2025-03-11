@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sinflar</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        .inCode{
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>New operatori</h1>
+    <p>
+        Bu operatorimiz bir sinf nomi bilan birgalikda foydalaniladi.
+        Berilgan sinf uchun xotiradan yangi bir obyekt tayyorlaydi.
+        Foydalanish shakliga bir misol:
+    </p>
+    <pre>
+        <code class="java"><code class="inCode">Talaba</code> talaba1 = <code class="inCode">new</code> Talaba();</code>
+    </pre>
+    <p>
+        Yuqoridagi misolimiz <code>talaba1</code> obyekti uchun <code>Talaba</code> sinfiga oid
+        bo’lgan xotira qismidan bir joy ajratib beradi. Agar bir obyekt
+        new operatori bilan berilmagan bo’lsa, Java unga avtomatik bir
+        shaklda <code>null</code> qiymatini beradi. Bu holatda bir sinf ichkarisidagi
+        metodlarga yoki o‘zgaruvchilarga erishmoqchi bo’lganimizda,
+        dasturimiz <code>NullPointerException</code> nomli bir xato beradi.
+    </p>
+    <h5>Nuqta (.) operatori </h5>
+    <p>
+        Obyektlar tayyorlanib new operatori orqali xotiradan joy olgan
+        so’ngra, obyektlarning public va protected kalit so’zlari bilan
+        berilgan o’zgaruvchilar yoki metodlarni tashqaridan
+        foydalanish uchun nuqta (.) operatori foydalaniladi. Bu
+        operatordan foydalanishni ko’rib chiqaylik.
+    </p>
+    <pre>
+        <code>
+            //….
+            <code class="inCode">Talaba</code> talaba1 = <code class="inCode">new</code> Talaba();
+            talaba1.setIsm(“Jafar”);
+            talaba1.setFamilya(“Sultan”);
+            //….</code>
+    </pre>
+    <p>
+        Yuqorida berilgan bu misolimizni tushuntirib o’tadigan
+        bo’lsam, birinchi bo’lib, Talaba turida bo’lgan talaba1 nomli
+        obyekt tayyorlangan. Bu obyektning sinfida setIsm nomli bir
+        metod tayyorlangan, u metodni tayyorlashda esa public kalit
+        so’zidan foydalanilgan. Yuqoridagi kodimizda talaba1 metodini
+        chaqirish uchun avval sinfning xotiraga saqlangan ismini yozamiz
+        keyin esa nuqta qo’ygan holda bu sinf ichkarisida
+        foydalanmoqchi bo’lgan metodimizni chaqirgan holda
+        foydalana olamiz, uchinchi va to’rtinchi qatordagi kabi.
+    </p>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

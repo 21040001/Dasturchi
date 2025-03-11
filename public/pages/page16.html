@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Polimorfizm</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .inCode {
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Polimorfizm</h1>
+    <p>
+        Polimorfizm, obyektga yo'naltirilgan dasturlashda, bir usul yoki ob'ektning bir necha turli xil shakllarda
+        paydo bo'lishini anglatadi. Java'da bu, bir sinfning bir nechta o'zgarishlarini amalga oshirish yoki bir
+        interfeysning bir nechta sinflar tomonidan amalga oshirilishi orqali amalga oshiriladi.
+        <br /><br />
+        Java'da polimorfizmni qanday amalga oshirish haqida oddiy bir misol keltiraman:
+    </p>
+    <pre><code class="java">
+        <code class="inCode">public class</code> Hayvon {
+            <code class="inCode">public void</code> ovozBer() {
+                System.out.println("Hayvon tovush chiqaradi.");
+            }
+        }
+
+        <code class="inCode">public class</code> It <code class="inCode">extends</code> Hayvon {
+            @Override
+            <code class="inCode">public void</code> ovozBer() {
+                System.out.println("It vov-vov qiladi.");
+            }
+        }
+        
+        <code class="inCode">public class</code> Mushuk <code class="inCode">extends</code> Hayvon {
+            @Override
+            <code class="inCode">public void</code> ovozBer() {
+                System.out.println("Mushuk miyovlaydi.");
+            }
+        }
+        
+        <code class="inCode">public class</code> Main {
+            <code class="inCode">public static void</code> main(String[] args) {
+                <code class="inCode">Hayvon</code> it = <code class="inCode">new</code> It();
+                <code class="inCode">Hayvon</code> mushuk = <code class="inCode">new</code> Mushuk();
+                
+                it.ovozBer();   // It vov-vov qiladi
+                mushuk.ovozBer(); // Mushuk miyovlaydi
+            }
+        }
+        
+    </code></pre>
+    <p>
+        Ushbu misolda, <code class="inCode">Hayvon</code> sinfi umumiy xususiyat va metodlarni o'z ichiga oladi.
+        <code class="inCode">It</code> va <code class="inCode">Mushuk</code> sinflari esa,
+        <code class="inCode">Hayvon</code> sinfidan meros olib, <code class="inCode">ovozBer</code> metodini qayta
+        belgilaydi (override qiladi)
+        va o'ziga xos xatti-harakatni ifodalaydi. Polimorfizm orqali, bir usul turli xil obyektlar bilan turli xil
+        xatti-harakatlarni amalga oshirishi mumkin.
+    </p>
+</body>
+
+</html>

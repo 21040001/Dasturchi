@@ -5,67 +5,53 @@ import './index.css';
 function Body() {
   const [data, setData] = useState([]);
   const [selectedDoc, setSelectedDoc] = useState(null); // Selected document state
+  const [content, setContent] = useState(''); // Loaded content
 
   useEffect(() => {
-    if (jsonData && jsonData.data) {
-      setData(jsonData.data); // JSON verilerini duruma aktar
-    } else {
-      console.error("JSON verisi yüklenemedi veya beklenen formatta değil.");
-    }
+    setData(jsonData.data); // JSON verilerini duruma aktar
   }, []);
-  
+
   useEffect(() => {
     if (selectedDoc && selectedDoc.Body) {
-      fetch('http://localhost:3001/api/run-script', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ scriptContent: selectedDoc.Body })
-      })
-      .then(response => response.text())
-      .then(data => setSelectedDoc({ ...selectedDoc, fetchedBody: data }))
-      .catch(error => console.error('Error running Node.js script:', error));
+      fetch(`/pages/${selectedDoc.Body}`)
+        .then(response => response.text())
+        .then(data => setContent(data))
+        .catch(error => console.error('Error loading HTML content:', error));
+    }else{
+      fetch(`/pages/page1.html`)
+        .then(response => response.text())
+        .then(data => setContent(data))
+        .catch(error => console.error('Error loading HTML content:', error));
     }
   }, [selectedDoc]);
 
   return (
     <div className="Body">
       <div className="list">
-        {data && data.length > 0 ? (
-          <ul>
-            {data.map((item) => (
-              <li key={item.collectionName}>
-                <strong>{item.collectionName}</strong>
-                <ul>
-                  {item.documents.map((doc) => (
-                    <li
-                      key={doc.id}
-                      onClick={() => setSelectedDoc(doc)} // Set the selected document on click
-                      style={{ cursor: 'pointer', fontWeight: selectedDoc?.id === doc.id ? 'bold' : 'normal' }}
-                    >
-                      {doc.id}
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>Veri yüklenemedi veya bulunamadı.</p>
-        )}
+        <ul>
+          {data.map((item) => (
+            <li key={item.collectionName}>
+              <strong>{item.collectionName}</strong>
+              <ul>
+                {item.documents.map((doc) => (
+                  <li
+                    key={doc.id}
+                    onClick={() => setSelectedDoc(doc)} // Set the selected document on click
+                    style={{ cursor: 'pointer', color: selectedDoc?.id === doc.id ? 'burlywood' : 'aliceblue' }}
+                  >
+                    {doc.id}
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="listBody">
-        <h2>{selectedDoc ? selectedDoc.id : 'Bir konu seçiniz.'}</h2>
-        <div>
-          {selectedDoc ? (
-            <pre>{selectedDoc.Body}</pre>
-          ) : (
-            'Lütfen bir belge seçiniz.'
-          )}
-        </div>
+        <div dangerouslySetInnerHTML={{ __html:  content || ""}} />
       </div>
     </div>
   );
-  
 }
 
 export default Body;

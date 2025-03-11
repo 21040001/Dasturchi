@@ -1,5 +1,6 @@
 import "./index.css";
 import img from "../../Images/man.png"
+
 function Home() {
 
     return (
@@ -7,10 +8,10 @@ function Home() {
             <div className="navbar">
                 <button className="logo"></button>
                 <div >
-                    <span>Home</span>
-                    <span>My courses</span>
-                    <span>My blog</span>
-                    <span>Contact me</span>
+                    <a href="/"><span>Home</span></a>
+                    <a href="/course"><span>My courses</span></a>
+                    <a href="/blogs"><span>My blog</span></a>
+                    <span >Contact me</span>
                 </div>
                 <div >
                     <span>uzb</span>

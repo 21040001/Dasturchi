@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sinflar</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        .inCode{
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sinflar</h1>
+    <p>
+        Sinflar Java dasturlash tilidagi eng muhim qismlardan biri
+        hisoblanadi. Butin kodlarimiz sinflar ichkarisida yoziladi. Sinflar
+        aslida, ma’lumotlarni birma-bir o’zgaruvchilarga saqlamasdan,
+        bir-biriga aloqali bo’lgan ma’lumotlarni bir joyga to’plagan
+        holda bir ma’lumot sifatida tanitish va erishish uchun
+        foydalaniladi. <br /><br /> Misol uchun, bir foydalanuvchining ma’lumotlarini saqlay
+        olishimiz uchun, foydalanuvchining ismi, familiyasi, yoshi, jinsi
+        kabi ma’lumotlari kerak bo’ladi. Bularni har birini bir o‘zgaruvchiga saqlash o’rniga, foydalanuvchi nomi bilan
+        bir sinf
+        tayyorlab , foydalanuvchi haqidagi ma’lumotlarni bu yerda
+        gruppalay olamiz. <br /><br /> Pastdagi misolda o’quvchilarning ma’lumotlarini saqlashimizga
+        yordamchi bo’lishi uchun tayyorlangan <code>Foydalanuvchi.java</code>
+        nomli sinf ko’rsatib o’tilgandir.
+    </p>
+    <pre><code class="java">
+        package Sinflar;
+        <code class="inCode">public class</code> Foydalanuvchi {
+            //o‘zgaruvchilar 
+            <code class="inCode">private String</code> ism ;
+            <code class="inCode">private String</code> familiya;
+            <code>private int</code> yosh;
+            <code class="inCode">private String</code> jinsi;
+            //quruvchi metodlar
+            <code class="inCode">public</code> Foydalanuvchi() {
+                ism = "";
+                familiya = "";
+                yosh =-1 ;
+                jinsi="";
+            }
+            <code class="inCode">public</code> Foydalanuvchi(String pism , 
+                String pfamiliya,
+                int pyosh, 
+                String pjinsi){
+                ism = pism;
+                familiya =pfamiliya;
+                yosh =pyosh;
+                jinsi = pjinsi;
+            }
+            /* foydalanuvchi haqidagi ma’lumotlarga erishishimizni saqlaydigan getter/setter metodlari*/
+            <code class="inCode">public String</code>  getIsm() {
+                return ism;
+            }
+            <code class="inCode">public void</code> setIsm(String ism) {
+                this.ism = ism;
+            }
+            <code class="inCode">public String</code> getFamiliya() {
+                 return familiya;
+            }
+            <code class="inCode">public void</code> setFamilya(String familya) {
+                this.familiya = familiya;
+            }
+            <code class="inCode">public int</code> getYosh() {
+                return yosh;
+            }
+            <code class="inCode">public void</code> setYosh(int yosh) {
+                this.yosh = yosh;
+            }
+            <code class="inCode">public String</code> getJinsi() {
+                return jinsi;
+            }
+            <code class="inCode">public void</code> setJinsi(String jinsi) {
+                this.jinsi = jinsi;
+            }
+            // boshqa metodlar
+            <code class="inCode">public String</code> toliq_ismi(){
+                return this.ism + " " + this.familiya;
+        }
+    }           
+
+    </code></pre>
+    <p>Yuqoridagi kodimizda e’tibor berishingiz kerak bo’lgan eng
+        muhim narsa, sinfimizning turgan fayl nomi bilan sinfning
+        nomini bir xil bo’lishi kerakligidir. Sinfimizning nomi
+        Foydalanuvchi bo’lganligi uchun sinfimizni <code>Foydalanuvchi.java</code>
+        nomli fayl ichiga saqlab qo’ydik. Agar sinfin kodlarini ko’rib
+        chiqadigan bo’lsak, sinfimiz to’rt qismlardan tashkil topganini
+        ko’ramiz.
+    </p>
+    <ul>
+        <li><b>O’zgaruvchilar </b>: Sinf ichkarisida saqlanadigan
+            ma’lumotlarning, sinf ichidagi maxsus o’zgaruvchilari.</li>
+        <li><b>Quruvchi metodlar</b>: Odatda sinflar yangilanib
+            chaqirilayotganda new operatori bilan birgalikda
+            chaqiriladigan metodlar beriladi.
+        </li>
+        <li><b>Foydalanuvchi haqidagi ma’lumotlarga erishishimizni
+                saqlaydigan getter/setter metodlari</b>: Bu metodlar
+            normal hollarda public sifatida ko’rsatiladi va private
+            sifatida ko’rsatib o’tilgan ma’lumot o’zgaruvchilarga
+            tashqi tarafdan erishishni ta’minlaydi.</li>
+        <li><b>Boshqa metodlar</b>: Sinf ichkarisidagi ma’lumotlardan
+            foydalangan holda, sinf bilan bog‘liq bo’lgan turli xil
+            natijalar chiqaradigan metodlar.</li>
+
+    </ul>
+    <p>Deyarli barcha sinflarimiz bu to’rt qismdan tashkil topadi.
+        Keyingi mavzularda bu qismlar haqida batafsilroq o’rganib
+        chiqamiz, o’rganib chiqishimizdan oldin obyektlarni ko’rib
+        chiqaylik.
+    </p>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

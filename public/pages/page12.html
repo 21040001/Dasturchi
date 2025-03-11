@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sinflar</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        .inCode{
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Methodlar</h1>
+    <p>Metodlar obyektga yo’naltirilgan dasturlash tillarida juda ham
+        muhim bo’limlardan biri hisoblanadi. Metodlar bo’limi
+        obyektga yo’naltirilgan dasturlash tillari yaratilishidan oldin
+        boshqa dasturlash tillarida juda ham ko’p foydalanilgan bir
+        bo’lim. Metodlar o’ziga parametr sifatida berilgan ma’lumotlar
+        bilan turli xil ishlar bajaradi. Bu ishlar bajarilgandan so’ngra
+        istaklarga bog’liq bir shaklda turli xil natijalar chiqaradi.
+        <br /><br />
+        Metodlar deyarli barcha dasturlash tillarida mavjud. ammo
+        nomlanish shakli boshqacha bo’lishi mumkin, misol uchun Java
+        dasturlash tilidagi metodlar C dasturlash tillarida funksiyalar
+        nomi olishi mumkin. Bir metodning tuzilish shakli quyidagicha:
+
+    </p>
+    <pre><code class="java">
+        <code class="inCode">Maxsus_kalitsoz nat_turi metod_nomi</code>(parametrlari) 
+        {
+            metod_kodlari;
+        }
+        </code></pre>
+        <p>Yuqoridagi metod shaklining har bir a’zosini detalli bir shaklda 
+            ko’rib chiqadigan bo’lsak: <br/> <br/>
+            <code>Maxsus_kalitsoz</code>: Bu qismni berish majburiy. Bu qismda 
+            metodga erishish holatlarini ko’rsatib turadigan <code>private, 
+            public, protected</code> kalit so’zlarini va metodning statik yoki statik emas ekanligini ko’rsatib turadigan static kalit so’zlarini 
+            foydalana olamiz.<br/> <br/> <code>Nat_turi:</code> Normal vaziyatlarda metodlarimiz bir natija 
+            chiqaradi. Metodlarning natija chiqarishi, metod ichkarisidagi 
+            return kodi bilan bog’liq. Return kodi bilan chiqarilgan natija 
+            turi bilan nat_turi qismida berilgan ma’lumot turi bir xil bo’lishi 
+            kerak. Misol uchun metodimiz ishga tushgandan keyin, int 
+            turida bo’lgan bir natija chiqaradigan bo’lsa, nat_turi qismi 
+            ham int bo’lishga majbur. Agar metodimiz har qanday bir natija 
+            chiqarmaydigan bir metod bo’lsa, nat_turi qismiga void kalit 
+            so’zi yoziladi. 
+            <br/> <br/><code>Metod_nomi</code> Bu qismda metodga nom beriladi berilgan nom 
+            orqali tashqaridan chaqirib foydalana olamiz.<br/> <br/>
+            <code>Parametrlar</code>: Bu qismda metodning bajaradigan ishlari uchun 
+            kerak bo’ladigan parametrlar berib o’tiladi. Bu parametrlar 
+            qavs ichkarisida beriladi va bir biridan vergul orqali ajratiladi. 
+            Pasta berilgan hisobla nomli metodga e’tibor berganimizda 
+            qavs ichida a va b nomli ikki parametrlar berilganligini ko’ramiz.
+            Agar bir metodning parametrlari mavjud bo’lmasa qavs 
+            ichkarisi bo’sh qolishi kerak.
+            <br/> <br/><code>Metod_kodlari</code>: Bu qismda metodimiz chaqirilganda 
+            bajariladigan kodlar yoziladi. Kodlarimiz bir qator ham bo’lishi 
+            mumkin, minglab qator ham bo’lishi mumkin har qanday bir 
+            chegara berilmagan.
+            </p>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

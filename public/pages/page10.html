@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Obyektlar</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        .inCode{
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Obyektlar</h1>
+    <p>Bir sinf tayyorlaganimizda, aslida bir ma’lumot turi tayyorlagan
+        bo’lamiz. Java dasturlash tilida, tayyorlangan bu yangi
+        ma’lumot turiga ega bo’lgan o‘zgaruvchilarga obyektlar
+        deyiladi. Misol uchun, yuqorida tayyorlagan Foydalanuvchi
+        nomli sinfimizdan yangi obyektlar tayyorlash uchun quyidagi
+        kodimizni ko’rib chiqaylik.</p>
+
+</body>
+<pre><code class="java">
+    package Obyekt;
+    import Sinflar.Foydalanuvchi;
+    <code class="inCode">public class</code> obyekt_misol {
+
+        <code class="inCode">public static void</code> main(String[] args) {
+
+            <code class="inCode">Foydalanuvchi</code> foydalanuvchi_1 = <code class="inCode">new </code> Foydalanuvchi();
+
+        foydalanuvchi_1.setIsm("Akmal");
+        foydalanuvchi_1.setFamilya("Roziboyev");
+        foydalanuvchi_1.setYosh(21);
+        foydalanuvchi_1.setJinsi("Erkak");
+
+        /* birinchi foydalanuvchi ma'lumotlarini ekranga chiqarish: */
+        System.out.println(foydalanuvchi_1.toliq_ismi());
+        System.out.println("Yoshi: "foydalanuvchi_1.getYosh());
+        System.out.println("Jinsi: "foydalanuvchi_1.getJinsi());
+        System.out.println("---------------");
+
+        /* boshqa bir foydalanuvchi ma'lumotlarini qo’shish*/
+        Foydalanuvchi foydalanuvchi_2 = new Foydalanuvchi("Shukurano","Abdurazzokova",20,"Ayol");
+        
+        /* ikkinchi foydalanuvchi ma'lumotlarini ekranga chiqarish: */
+        System.out.println(foydalanuvchi_2.toliq_ismi());
+        System.out.println("Yoshi: "foydalanuvchi_2.getYosh());
+        System.out.println("Jinsi: "foydalanuvchi_2.getJinsi());
+        }
+       }
+</code></pre>
+<p>Yuqoridagi obyekt_misol.java nomli kodimizning ishlash
+    jarayoni haqida qisqacha ma’lumot berib o’taman. Bu
+    kodimizda foydalanuvchi sinfidan 2 dona obyekt tayyorlandi va
+    foydalanuvchi_1 , foydalanuvchi_2 nomlari mos shaklda
+    berildi. Undan so’ngra, har bir obyektga set metodi yordami
+    bilan qiymatlar berildi. So‘ngra, bu obyektlarga berilgan
+    qiymatlar get metodi yordami bilan ekranga chiqarildi. Bu
+    kodimizni ishga tushirganimizda quyidagicha bir javob olamiz:
+</p>
+<pre><code>
+    Akmal Roziboyev
+    Yoshi: 21
+    Jinsi: Erkak
+    ----------------------------
+    Shukurano Abdurazzokova
+    Yoshi: 20
+    Jinsi: Ayol
+</code></pre>
+
+</html>

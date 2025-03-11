@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Java Sikllar</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        .inCode{
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Java Sikllar</h1>
+    <h5>Sikl (Loop) nima?</h5>
+    <p>Sikl yoki loop - bu dasturlashda takroriy amallarni bajarish uchun ishlatiladigan dasturiy konstruktsiya. Sikllar dasturdagi kod bloklarini bir necha marta qayta ishlatishga imkon beradi.</p>
+    <h5>1. for Sikli</h5>
+    <p><code>for</code> sikli takroriy amallarni bajarish uchun ishlatiladi va oldindan belgilangan mantiqiy shart asosida ishlaydi.</p>
+    <pre><code class="java">
+        <code class="inCode">for</code> (<code class="inCode">int</code> i = 0; i < 5; i++) {
+            System.out.println("i: " + i);
+        }
+    </code></pre>
+
+    <h5>2. while Sikli</h5>
+    <p><code>while</code> sikli shart <code>true</code> bo'lganicha takroriy amallarni bajaradi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> i = 0;
+        <code class="inCode">while</code> (i < 5) {
+            System.out.println("i: " + i);
+            i++;
+        }
+    </code></pre>
+
+    <h5>3. do-while Sikli</h5>
+    <p><code class="inCode">do-while</code> sikli kamida bir marta bajariladi va shart keyin tekshiriladi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> i = 0;
+        <code class="inCode">do</code> {
+            System.out.println("i: " + i);
+            i++;
+        } <code class="inCode">while</code> (i < 5);
+    </code></pre>
+
+    <h5>4. Misol: 1 dan 5 gacha sonlarni chiqarish</h5>
+    <p>Quyidagi misolda 1 dan 5 gacha sonlarni chiqarish uchun turli sikl operatorlari ishlatilgan.</p>
+    <pre><code class="java">
+        // for sikli bilan
+        <code class="inCode">for</code> (<code class="inCode">int</code> i = 1; i <= 5; i++) {
+            System.out.println(i);
+        }
+
+        // while sikli bilan
+        <code class="inCode">int</code> j = 1;
+        <code class="inCode">while</code> (j <= 5) {
+            System.out.println(j);
+            j++;
+        }
+
+        // do-while sikli bilan
+        <code class="inCode">int</code> k = 1;
+        <code class="inCode">do</code> {
+            System.out.println(k);
+            k++;
+        } <code class="inCode">while</code> (k <= 5);
+    </code></pre>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

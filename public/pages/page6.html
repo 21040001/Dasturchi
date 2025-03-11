@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Java Operatorlari</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .inCode{
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Java Operatorlari</h1>
+    <p>Java dasturlash tilida operatorlar dasturda turli xil amallarni bajarish uchun ishlatiladi. Ular arifmetik, taqqoslash, mantiqiy, bitli va boshqa turdagi amallarni bajarishga yordam beradi.</p>
+
+    <h5>1. Arifmetik Operatorlar</h5>
+    <p>Arifmetik operatorlar sonlar ustida matematik amallarni bajarish uchun ishlatiladi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> a = 10;
+        <code class="inCode">int</code> b = 3;
+        System.out.println(a + b); // 13
+        System.out.println(a - b); // 7
+        System.out.println(a * b); // 30
+        System.out.println(a / b); // 3
+        System.out.println(a % b); // 1
+    </code></pre>
+
+    <h5>2. Taqqoslash Operatorlari</h5>
+    <p>Taqqoslash operatorlari ikkita qiymatni solishtirish uchun ishlatiladi. Ular <code>boolean</code> (<code>true</code> yoki <code>false</code>) qiymat qaytaradi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> x = 10;
+        <code class="inCode">int</code> y = 20;
+        System.out.println(x > y); // false
+        System.out.println(x == y); // false
+        System.out.println(x != y); // true
+    </code></pre>
+
+    <h5>3. Mantiqiy Operatorlar</h5>
+    <p>Mantiqiy operatorlar <code>boolean</code> qiymatlar ustida amallar bajaradi. Ular shartlarni birlashtirish uchun ishlatiladi.</p>
+    <pre><code class="java">
+        <code class="inCode">boolean</code> a = <code>true</code>;
+        <code class="inCode">boolean</code> b = <code>false</code>;
+        System.out.println(a && b); // false
+        System.out.println(a || b); // true
+        System.out.println(!a); // false
+    </code></pre>
+
+    <h5>4. Bitli Operatorlar</h5>
+    <p>Bitli operatorlar sonlarni ikkilik (binary) ko'rinishda ishlaydi. Ular bit darajasida amallar bajaradi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> a = 5; // 0101
+        <code class="inCode">int</code> b = 3; // 0011
+        System.out.println(a & b); // 0001 -> 1
+        System.out.println(a | b); // 0111 -> 7
+        System.out.println(a ^ b); // 0110 -> 6
+    </code></pre>
+
+    <h5>5. Tayinlash Operatorlari</h5>
+    <p>Tayinlash operatorlari o'zgaruvchilarga qiymat berish uchun ishlatiladi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> a = 10;
+        a += 5; // a = 15
+        a *= 2; // a = 30
+        System.out.println(a); // 30
+    </code></pre>
+
+    <h5>6. Shartli (Ternary) Operator</h5>
+    <p>Shartli operator (<code>? :</code>) shartga qarab ikki qiymatdan birini tanlash uchun ishlatiladi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> a = 10;
+        <code class="inCode">int</code> b = 20;
+        <code class="inCode">int</code> max = (a > b) ? a : b; // max = 20
+        System.out.println(max);
+    </code></pre>
+
+    <h5>7. Instanceof Operatori</h5>
+    <p><code>instanceof</code> operatori ob'ektning ma'lum bir sinfga tegishli ekanligini tekshiradi.</p>
+    <pre><code class="java">
+        <code class="inCode">String</code> text = "Hello";
+        System.out.println(text <code class="inCode">instanceof</code> String); // true
+    </code></pre>
+
+    <h5>8. Operatorlar Ustuvorligi</h5>
+    <p>Operatorlar ustuvorligi (precedence) amallarning qaysi tartibda bajarilishini belgilaydi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> result = 10 + 5 * 2; // 5 * 2 = 10, keyin 10 + 10 = 20
+        System.out.println(result); // 20
+    </code></pre>
+
+    <h5>9. Qo'shimcha Operatorlar</h5>
+    <p>Matnlarni birlashtirish va tur o'zgartirish (type casting) kabi amallar.</p>
+    <pre><code class="java">
+        <code class="inCode">String</code> name = "Ali";
+        <code class="inCode">String</code> greeting = "Hello, " + name; // "Hello, Ali"
+
+        <code class="inCode">double</code> a = 10.5;
+        <code class="inCode">int</code> b = (<code>int</code>) a; // b = 10
+    </code></pre>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Java Shart Operatorlari</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        .inCode{
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Java Shart Operatorlari</h1>
+    <p>Java dasturlash tilida <code>if</code>, <code>else-if</code>,  <code>else</code> va <code>switch-case</code> shart operatorlari dasturda shartli amallarni bajarish uchun ishlatiladi.</p>
+
+    <h5>1. if Operatori</h5>
+    <p><code>if</code> operatori shartni tekshiradi va shart <code>true</code> bo'lsa, unga tegishli kod blokini bajaradi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> a = 10;
+        <code class="inCode">if</code> (a > 5) {
+            System.out.println("a 5 dan katta");
+        }
+    </code></pre>
+
+    <h5>2. if-else Operatori</h5>
+    <p><code >if-else</code> operatori shartni tekshiradi. Agar shart <code>true</code> bo'lsa, <code>if</code> bloki bajariladi, aks holda <code>else</code> bloki bajariladi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> a = 3;
+        <code class="inCode">if</code> (a > 5) {
+            System.out.println("a 5 dan katta");
+        } <code class="inCode">else</code> {
+            System.out.println("a 5 dan kichik yoki teng");
+        }
+    </code></pre>
+
+    <h5>3. if-else if-else Operatori</h5>
+    <p><code>if-else if-else</code> operatori bir nechta shartlarni ketma-ket tekshiradi. Birinchi <code>true</code> bo'lgan shartga tegishli blok bajariladi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> a = 7;
+        <code class="inCode">if</code> (a > 10) {
+            System.out.println("a 10 dan katta");
+        } <code class="inCode">else if</code> (a > 5) {
+            System.out.println("a 5 dan katta, lekin 10 dan kichik yoki teng");
+        } <code class="inCode">else</code> {
+            System.out.println("a 5 dan kichik yoki teng");
+        }
+    </code></pre>
+
+    <h5>4. Ichma-ich if Operatori</h5>
+    <p><code>if</code> operatori ichida yana bir <code>if</code> operatori ishlatish mumkin. Bu ichma-ich shartlarni tekshirish uchun ishlatiladi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> a = 15;
+        <code class="inCode">if</code> (a > 10) {
+            <code class="inCode">if</code> (a < 20) {
+                System.out.println("a 10 dan katta va 20 dan kichik");
+            }
+        }
+    </code></pre>
+
+    <h5>5. Qisqa if-else (Ternary Operator)</h5>
+    <p>Qisqa shartli operator (<code>? :</code>) shartga qarab ikki qiymatdan birini tanlash uchun ishlatiladi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> a = 10;
+        <code class="inCode">int</code> b = 20;
+        <code class="inCode">int</code> max = (a > b) ? a : b; // max = 20
+        System.out.println(max);
+    </code></pre>
+
+    <h5>6. switch-case Operatori</h5>
+    <p><code>switch</code> operatori bir nechta shartlarni tekshirish va bajarish uchun ishlatiladi. Har bir shart <code>case</code> bilan belgilanadi va kerakli kod bloklari amalga oshiriladi.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> haftaKuni = 3;
+        <code class="inCode">switch</code> (haftaKuni) {
+            <code class="inCode">case</code> 1:
+                System.out.println("Dushanba");
+                <code class="inCode">break</code>;
+            <code class="inCode">case</code> 2:
+                System.out.println("Seshanba");
+                <code class="inCode">break</code>;
+            <code class="inCode">case</code> 3:
+                System.out.println("Chorshanba");
+                <code class="inCode">break</code>;
+            <code class="inCode">case</code> 4:
+                System.out.println("Payshanba");
+                <code class="inCode">break</code>;
+            <code class="inCode">case</code> 5:
+                System.out.println("Juma");
+                <code class="inCode">break</code>;
+            <code class="inCode">case</code> 6:
+                System.out.println("Shanba");
+                <code class="inCode">break</code>;
+            <code class="inCode">case</code> 7:
+                System.out.println("Yakshanba");
+                <code class="inCode">break</code>;
+            <code class="inCode">default</code>:
+                System.out.println("Noma'lum kun");
+                <code class="inCode">break</code>;
+        }
+    </code></pre>
+
+    <h5>7. Misol: Baholarni Tekshirish</h5>
+    <p>Quyida talabaning bahosiga qarab uning natijasini chiqaruvchi misol keltirilgan.</p>
+    <pre><code class="java">
+        <code class="inCode">int</code> baho = 85;
+        <code class="inCode">if</code> (baho >= 90) {
+            System.out.println("A'lo");
+        } <code class="inCode">else if</code> (baho >= 80) {
+            System.out.println("Yaxshi");
+        } <code class="inCode">else if</code> (baho >= 70) {
+            System.out.println("Qoniqarli");
+        } <code class="inCode">else</code> {
+            System.out.println("Qoniqarsiz");
+        }
+    </code></pre>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

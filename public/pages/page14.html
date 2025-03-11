@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inkapsulyatsiya</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .inCode {
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Inkapsulyatsiya</h1>
+    <p>
+        Inkapsulyatsiya, Java va boshqa obyektga yo'naltirilgan dasturlash tillarida, ma'lumotlar va ularni qayta
+        ishlovchi usullarni birgalikda paketlashni anglatadi. Bu konsept, ma'lumotlarga tashqi tomondan
+        to'g'ridan-to'g'ri kirishni oldini olish orqali faqatgina belgilangan usullar orqali kirishni ta'minlaydi. Shu
+        tariqa, ma'lumotlarning butunligi va xavfsizligi saqlanadi.
+        <br /><br />
+        Java'da inkapsulyatsiyani qanday amalga oshirish haqida oddiy bir misol keltiraman:
+
+    </p>
+    <pre><code class="java">
+        <code class="inCode">public class</code> Student {
+            // Xususiy (private) maydonlar
+            <code class="inCode">private String</code> ism;
+            <code class="inCode">private int</code> yosh;
+        
+            // Ommaviy (public) kirish usullari (getter va setter)
+            <code class="inCode">public String</code> getIsm() {
+                <code class="inCode">return</code> ism;
+            }
+        
+            <code class="inCode">public void</code> setIsm(<code class="inCode">String</code> yangiIsm) {
+                <code class="inCode">this</code>.ism = yangiIsm;
+            }
+        
+            <code class="inCode">public int</code> getYosh() {
+                <code class="inCode">return</code> yosh;
+            }
+        
+            <code class="inCode">public void</code> setYosh(<code class="inCode">int</code> yangiYosh) {
+                <code class="inCode">if</code> (yangiYosh > 0) {
+                    <code class="inCode">this</code>.yosh = yangiYosh;
+                }
+            }
+        }
+        
+        <code class="inCode">public class</code> Main {
+            <code class="inCode">public static void</code> main(String[] args) {
+                <code class="inCode">Student</code> student = <code class="inCode">new</code> Student();
+                student.setIsm("Ahmad");
+                student.setYosh(20);
+        
+                System.out.println("Talabaning ismi: " + student.getIsm());
+                System.out.println("Talabaning yoshi: " + student.getYosh());
+            }
+        }
+        
+        </code>
+    </pre>
+    <p>
+        Bu misolda, ism va yosh o'zgaruvchilari private deb belgilangan, ya'ni bu maydonlarga to'g'ridan-to'g'ri kirish
+        cheklangan. Biroq, <code class="inCode">getIsm, setIsm, getYosh</code> va <code class="inCode">setYosh</code>
+        kabi <code class="inCode">public</code> kirish usullari <code class="inCode">(getter va setter)</code> orqali bu
+        maydonlarga kirish mumkin.
+    </p>
+</body>
+
+</html>

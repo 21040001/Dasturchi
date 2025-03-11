@@ -1,26 +1,22 @@
-import Home from "../Components/Home/index"
-import Project from "../Components/Projects";
-import Skill from "../Components/Skills";
-import Contact from "../Components/ContactMe";
-import Body from "../MyCourseComponents/Body";
-import Header from "../MyCourseComponents/Header";
-import Navbar from "../MyCourseComponents/Navbar";
+
 import "./app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import HomePage from "../Pages/HomePage";
+import CoursePage from "../Pages/CoursePage";
+import BlogPage from "../Pages/BlogPage";
+import ReadPage from "../Pages/ReadPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
-    <div className="app">
-      <Header></Header>
-      <Navbar></Navbar>
-      <Body></Body>
-    </div>
-    /*
-    <div className="app">
-      <Home/>
-      <Project/>
-      <Skill/>
-      <Contact/>
-    </div>*/
+    <BrowserRouter>
+    <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="blogs" element={<BlogPage />} />
+        <Route path="course" element={<CoursePage />} />
+        <Route path="read" element={<ReadPage />} />
+        <Route path="*" element={<HomePage />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 

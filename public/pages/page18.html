@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interfeyslar</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .inCode {
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Interfeyslar</h1>
+    <p>
+        Interfeyslar, obyektga yo'naltirilgan dasturlashda, sinflar tomonidan amalga oshirilishi kerak bo'lgan 
+        metodlar to'plamini belgilash uchun foydalaniladi. Interfeyslar yordamida sinflar o'rtasida mustahkam bog'lanishlar
+        yaratmasdan turib, bir xil metodlarni turli xil sinflarda amalga oshirish mumkin.
+        <br /><br />
+        Java'da interfeyslarni qanday amalga oshirish haqida oddiy bir misol keltiraman:
+    </p>
+    <pre><code class="java">
+        <code class="inCode">public interface</code> Hayvon {
+            <code class="inCode">void</code> ovozBer();
+        }
+
+        <code class="inCode">public class</code> It <code class="inCode">implements</code> Hayvon {
+            @Override
+            <code class="inCode">public void</code> ovozBer() {
+                System.out.println("It vov-vov qiladi.");
+            }
+        }
+        
+        <code class="inCode">public class</code> Mushuk <code class="inCode">implements</code> Hayvon {
+            @Override
+            <code class="inCode">public void</code> ovozBer() {
+                System.out.println("Mushuk miyovlaydi.");
+            }
+        }
+
+        <code class="inCode">public class</code> Main {
+            <code class="inCode">public static void</code> main(String[] args) {
+                <code class="inCode">Hayvon</code> it = <code class="inCode">new</code> It();
+                <code class="inCode">Hayvon</code> mushuk = <code class="inCode">new</code> Mushuk();
+                
+                it.ovozBer();   // It vov-vov qiladi
+                mushuk.ovozBer(); // Mushuk miyovlaydi
+            }
+        }
+        
+    </code></pre>
+    <p>
+        Ushbu misolda, <code class="inCode">Hayvon</code> interfeysi umumiy metodni o'z ichiga oladi. 
+        <code class="inCode">It</code> va <code class="inCode">Mushuk</code> sinflari esa, 
+        <code class="inCode">Hayvon</code> interfeysini amalga oshirib, <code class="inCode">ovozBer</code> metodini 
+        o'ziga xos xatti-harakat bilan ta'minlaydi. Interfeyslar yordamida, bir xil metodlarni turli xil sinflarda amalga 
+        oshirish va mustahkam bog'lanishlardan qochish mumkin.
+    </p>
+</body>
+
+</html>

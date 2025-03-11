@@ -1,0 +1,80 @@
+.footer{
+    background-color: #121212;
+    color: aliceblue;
+    padding: 20px;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.marginBottom {
+    margin-bottom: 0px;
+}
+
+.paddingright {
+    padding-right: 5px;
+}
+
+.paddingright15 {
+    padding-right: 25px;
+}
+
+.row1 {
+    padding-top: 30px;
+}
+
+.row2 {
+    margin-top: 30px;
+}
+
+.display {
+    display: none;
+}
+
+.animationFooter {
+
+    position: relative;
+    animation-name: anim1;
+    animation-duration: 1s;
+
+
+}
+
+.marginleft {
+    position: relative;
+    animation-name: anim2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.footer a{
+    color:white;
+}
+
+.col{
+    width: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    margin-right: auto;
+}
+@keyframes anim1 {
+    0% {
+        left: -10px;
+        top: 0px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes anim2 {
+
+    from {
+        left: 0px
+    }
+
+    to {
+        left: 10px
+    }
+}

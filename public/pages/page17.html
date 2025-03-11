@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Abstraktsiya</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .inCode {
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Abstraktsiya</h1>
+    <p>
+        Abstraktsiya, obyektga yo'naltirilgan dasturlashda, muhim bo'lgan xususiyatlarni ajratib olib, ortiqcha
+        tafsilotlarni yashirishni anglatadi. Bu dasturlash konsepti yordamida murakkab tizimlar sodda va tushunarli
+        shaklda taqdim etiladi.
+        <br /><br />
+        Java'da abstraktsiyani amalga oshirish uchun abstract sinflar va interfeyslardan foydalanish mumkin. Oddiy bir
+        misol keltiraman:
+    </p>
+    <pre><code class="java">
+        <code class="inCode">public abstract class</code> Transport {
+            <code class="inCode">private String</code> model;
+            
+            <code class="inCode">public String</code> getModel() {
+                <code class="inCode">return</code> model;
+            }
+            
+            <code class="inCode">public void</code> setModel(<code class="inCode">String</code> model) {
+                <code class="inCode">this</code>.model = model;
+            }
+            
+            <code class="inCode">public abstract void</code> harakatlan();
+        }
+
+        <code class="inCode">public class</code> Avtomobil <code class="inCode">extends</code> Transport {
+            @Override
+            <code class="inCode">public void</code> harakatlan() {
+                System.out.println("Avtomobil yurmoqda.");
+            }
+        }
+        
+        <code class="inCode">public class</code> Samolyot <code class="inCode">extends</code> Transport {
+            @Override
+            <code class="inCode">public void</code> harakatlan() {
+                System.out.println("Samolyot uchmoqda.");
+            }
+        }
+
+        <code class="inCode">public class</code> Main {
+            <code class="inCode">public static void</code> main(String[] args) {
+                <code class="inCode">Transport</code> avtomobil = <code class="inCode">new</code> Avtomobil();
+                avtomobil.setModel("Toyota");
+                System.out.println("Model: " + avtomobil.getModel());
+                avtomobil.harakatlan();
+                
+                <code class="inCode">Transport</code> samolyot = <code class="inCode">new</code> Samolyot();
+                samolyot.setModel("Boeing");
+                System.out.println("Model: " + samolyot.getModel());
+                samolyot.harakatlan();
+            }
+        }
+        
+    </code></pre>
+    <p>
+        Ushbu misolda, <code class="inCode">Transport</code> abstrakt sinfi umumiy xususiyat va metodlarni o'z ichiga
+        oladi. <code class="inCode">Avtomobil</code> va <code class="inCode">Samolyot</code> sinflari esa,
+        <code class="inCode">Transport</code> sinfidan meros olib, <code class="inCode">harakatlan</code> metodini qayta
+        belgilaydi (override qiladi) va o'ziga xos xatti-harakatni ifodalaydi. Abstraktsiya orqali murakkab tizimlar
+        sodda va tushunarli shaklda taqdim etiladi.
+    </p>
+</body>
+
+</html>

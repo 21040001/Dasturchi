@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sinflar</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        .inCode{
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Konstruktor metodlar (Constructors)</h1>
+    <p>
+        Bu metodlar, new kalit so’zi yordami bilan yangi bir obyekt 
+tayyorlanganda avtomatik bir shaklda ishga tushiriladi. Bu 
+metodlarning nomi , ichida joylashgan sinf nomi bilan bir xil 
+bo’lishi kerak. Ya’ni bu metod qaysi sinf ichida yozilgan bo’lsa, 
+metodning nomi o’sha sinfning nomi bilan bir xil bo’lishga 
+majbur. Keling bu metodimizga bir misol ko’rib chiqamiz.
+
+    </p>
+    <pre><code class="java">
+        <code class="inCode">public class</code> Azolar {
+            <code class="inCode">private String</code> ism;
+            <code class="inCode">private String</code> familiya;
+            <code class="inCode">private int</code> yoshi;
+            // konstruktor metod - 1
+            <code class="inCode">public</code> Azolar(){
+                ism ="";
+                familiya="";
+                yoshi=0;
+            }
+            // konstruktor metod - 2
+            <code class="inCode">public</code> Azolar(<code class="inCode">String</code> pism,
+            <code class="inCode">String</code> pfamilya,
+            <code class="inCode">int</code> pyoshi){
+                ism = pism;
+                familiya = pfamilya;
+                yoshi= pyoshi;
+            }
+           }
+           
+        </code></pre>
+<p>
+    Konstruktor metodlarni boshqa metodlardan ajratish uchun 
+metodga berilgan nomga qarashingiz yetarli, agar metod nomi 
+va metod joylashgan sinf nomi bir xil bo’lsa demakki bu metod 
+konstruktor metodlaridan bir hisoblanadi. Yuqoridagi 
+kodimizda ikki dona konstruktor metodlari mavjud. E’tibor 
+bergan bo’lsangiz metodlarning nomi bilan sinfning nomi bir 
+xil, ya’ni ikkisi ham <code>Azolar</code> nomini olgan. <br/><br/>Agar metod har qanday bir parametrdan foydalanmagan holda 
+chaqirilsa, birinchi metodimiz chaqirilgan hisoblanadi. Agar uch 
+dona parametr berilgan holda chaqirilsa ikkinchi metodimiz 
+chaqirilgandir. Berilgan parametrlar, tabiiyki metodimiz 
+ichidagi parametr turlariga mos bo’lishi kerak, ya’ni metodimiz 
+int turidagi parametr istasa int turidagi parametr beriladi. <br/><br/>Har bir sinf ichkarisida konstruktor metodi bo’lishi kerak degan 
+bir majburiyat yo’q. Agar sinf ichkarisida konstruktor metod bo’lmasa, dasturlash tilimiz sinf ichkarisida bir bo’sh bo’lgan 
+konstruktor metod mavjud deb hisoblaydi.
+<br/><br/>Konstruktor metodlar new operatori bilan birgalikda ishlaydi. 
+Pastdagi misol kodimizda azo_1 uchun new operatoridan 
+foydalanilgan holda <code>Azolar</code> sinfidan yangi bir obyekt 
+tayyorlangan va parametr berilmagani uchun birinchi metod 
+chaqirilgan deb hisoblangan. Kod ichkarisida yana bir azo_2 
+nomli obyekt ham tayyorlangan, tayyorlash davomida uch 
+dona parametr berilgani uchun ikkinchi metod chaqirildi deb 
+hisoblandi.
+</p>
+<pre><code class="java">
+    // Birinchi metod chaqiriladi
+    <code class="inCode">Azolar</code> azo_1 = <code class="inCode">new</code> Azolar();
+    // Ikkinchi metod chaqiriladi
+    <code class="inCode">Azolar</code> azo_2 = <code class="inCode">new</code> Azolar(“Mert”, “Arikan”, 22);
+    
+</code></pre>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+
+.news h1{
+    margin-left: 30px;
+    color: #000;
+}
+.news .row2{
+    display: flex;
+    height: 950px;
+}
+.news .row2 .firstColumn{
+    width: 40%;
+    padding-left: 30px;
+}
+.news .row2 .secondColumn{
+width: 30%;
+}
+.news .row2 .thridColumn{
+width: 30%;
+}
+.news .row2 .firstColumn img{
+    width: 100%;
+    border: 1px solid rgb(218, 212, 212);
+}
+.news .row2 .firstColumn h2{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: black;
+    font-family: fantasy;
+    font: bold;
+}
+.news .row2 .firstColumn .text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Maksimum 3 satır */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.news .row2 .firstColumn h6{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.news .row2 .secondColumn .text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Maksimum 3 satır */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.news .row2 .secondColumn ul li img{
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgb(218, 212, 212);
+}
+.news .row2 .secondColumn ul li{
+    margin-top: 20px;
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+}
+.news .row2 .secondColumn ul{
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.news .row2 .secondColumn ul::-webkit-scrollbar{
+    display: none;
+}
+.news .thridColumn ul li img{
+    width: 100%;
+    height: 200px;
+}
+.news .thridColumn ul li{
+    padding: 20px;
+    list-style: none;
+}
+.news .row2 .thridColumn ul{
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.news .row2 .thridColumn ul::-webkit-scrollbar{
+    display: none;
+}

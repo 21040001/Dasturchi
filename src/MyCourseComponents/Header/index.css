@@ -12,6 +12,11 @@
     align-items: center;
     padding: 10px 20px;
 }
+.header .navbar a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .header .navbar .logo {
     height: 20px;
     width: 60px;

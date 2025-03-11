@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meros Olish</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .inCode {
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Meros Olish</h1>
+    <p>
+        Java'da meros olish (inheritance), bir sinifin (class) başqa bir siniften özellik ve davranışları devralmasına
+        olanak tanıyan bir nesne yönelimli programlama konseptidir. Meros olish orqali, kodni qayta ishlatish imkoniyati
+        ortadi va sinflar o'rtasida o'xshash xatti-harakatlar bilan bog'liq bo'lgan mantiqiy bog'liqliklarni ifodalash
+        mumkin bo'ladi.
+        <br /><br />
+        Java'da meros olishni qanday amalga oshirish haqida oddiy bir misol keltiraman:
+    </p>
+    <pre><code class="java">
+        <code class="inCode">public class</code> Hayvon {
+            <code class="inCode">private String</code> ism;
+            
+            <code class="inCode">public void</code> setIsm(<code class="inCode">String</code> ism) {
+                <code class="inCode">this</code>.ism = ism;
+            }
+            
+            <code class="inCode">public String</code> getIsm() {
+                <code class="inCode">return</code> ism;
+            }
+            
+            <code class="inCode">public void</code> ovozBer() {
+                System.out.println("Hayvon tovush chiqaradi.");
+            }
+        }
+        
+        <code class="inCode">public class</code> It <code class="inCode">extends</code> Hayvon {
+            @Override
+            <code class="inCode">public void</code> ovozBer() {
+                System.out.println("It vov-vov qiladi.");
+            }
+        }
+        
+        <code class="inCode">public class</code> Main {
+            <code class="inCode">public static void</code> main(String[] args) {
+                <code class="inCode">It</code> it = <code class="inCode">new</code> It();
+                it.setIsm("Rex");
+                System.out.println("Itning ismi: " + it.getIsm());
+                it.ovozBer();
+            }
+        }
+        
+    </code></pre>
+    <p>
+        Ushbu misolda, Hayvon sinfi umumiy xususiyat va metodlarni o'z ichiga olgan super sinfdir. It sinfi esa, Hayvon
+        sinfidan meros olib, <code class="inCode">ovozBer</code> metodini qayta belgilaydi (override qiladi) va o'ziga
+        xos
+        xatti-harakatni ifodalaydi.
+    </p>
+</body>
+
+</html>

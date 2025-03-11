@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Metod Overloading</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .inCode {
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Metod Overloading</h1>
+    <p>
+        Metod overloading, obyektga yo'naltirilgan dasturlashda, bir sinfda bir xil nomga ega bo'lgan, ammo turli xil
+        parametrlarga ega bo'lgan bir nechta usullarni belgilashni anglatadi. Bu dasturchilarga bir xil nomni turli
+        xil vazifalar uchun ishlatish imkonini beradi.
+        <br /><br />
+        Java'da metod overloadingni qanday amalga oshirish haqida oddiy bir misol keltiraman:
+    </p>
+    <pre><code class="java">
+        <code class="inCode">public class</code> MathUtils {
+            <code class="inCode">public int</code> add(<code class="inCode">int</code> a, <code class="inCode">int</code> b) {
+                <code class="inCode">return</code> a + b;
+            }
+            
+            <code class="inCode">public double</code> add(<code class="inCode">double</code> a, <code class="inCode">double</code> b) {
+                <code class="inCode">return</code> a + b;
+            }
+            
+            <code class="inCode">public int</code> add(<code class="inCode">int</code> a, <code class="inCode">int</code> b, <code class="inCode">int</code> c) {
+                <code class="inCode">return</code> a + b + c;
+            }
+        }
+
+        <code class="inCode">public class</code> Main {
+            <code class="inCode">public static void</code> main(String[] args) {
+                <code class="inCode">MathUtils</code> math = <code class="inCode">new</code> MathUtils();
+                System.out.println("2 + 3 = " + math.add(2, 3));
+                System.out.println("2.5 + 3.5 = " + math.add(2.5, 3.5));
+                System.out.println("1 + 2 + 3 = " + math.add(1, 2, 3));
+            }
+        }
+        
+    </code></pre>
+    <p>
+        Ushbu misolda, <code class="inCode">MathUtils</code> sinfi bir nechta <code class="inCode">add</code> usulini
+        o'z ichiga oladi. Har bir <code class="inCode">add</code> usuli turli xil parametrlarga ega va shunga mos
+        tarzda turli xil arifmetik amallarni bajaradi. Metod overloading yordamida, bir xil nomdagi usullardan
+        turli xil parametrlar bilan foydalanish va kodni sodda va tushunarli qilish mumkin.
+    </p>
+</body>
+
+</html>

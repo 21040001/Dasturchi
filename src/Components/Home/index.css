@@ -1,11 +1,15 @@
 .home {
     background-color: #121212;
-    height: 100%;
+   /* height: 100%;*/
     padding: 20px;
+    padding-bottom: 0px;
     display: flex;
     flex-direction: column;
 }
-
+.home .navbar a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
 .home .navbar {
     color: #FFFFFF;
     display: flex;

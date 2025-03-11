@@ -1,22 +1,38 @@
 {
   "data": [
     {
-      "collectionName": "Collection A",
+      "collectionName": "Kirish",
       "documents": [
-        { "id": "Doc1", "Body": "element body 1" },
-        { "id": "Doc2", "Body": "element body 2" }
+        { "id": "Java tarixi", "Body": "page1.html" },
+        { "id": "Java'ning xususiyatlari", "Body": "page2.html" },
+        { "id": "JDK, JRE, IDE", "Body": "page3.html" }
       ]
     },
     {
-      "collectionName": "Collection B",
+      "collectionName": "Asosiy Java",
       "documents": [
-        { "id": "Doc3", "Body": "element body 3" }
+        { "id": "Java dasturining tuzilishi", "Body": "page4.html" },
+        { "id": "O'zgaruvchilar va ma'lumot turlari", "Body": "page5.html" },
+        { "id": "Operatorlar", "Body": "page6.html" },
+        { "id": "Java shart operatorlari ", "Body": "page7.html" },
+        { "id": "Sikllar (for, while, do-while)", "Body": "page8.html" }
       ]
     },
     {
-      "collectionName": "Collection C",
+      "collectionName": "OOP",
       "documents": [
-        { "id": "Doc4", "Body": "element body 4" }
+        { "id": "Sinflar", "Body": "page9.html" },
+        { "id": "Ob'yektlar", "Body": "page10.html" },
+        { "id": "New operatori", "Body": "page11.html" },
+        { "id": "Metodlar", "Body": "page12.html" },
+        { "id": "Metod Overloading", "Body": "page19.html" },
+        { "id": "Takrorlanuvchi metodlar", "Body": "page20.html" },
+        { "id": "Konstruktorlar", "Body": "page13.html" },
+        { "id": "Inkapsulyatsiya", "Body": "page14.html" },
+        { "id": "Meros olish", "Body": "page15.html" },
+        { "id": "Polimorfizm", "Body": "page16.html" },
+        { "id": "Abstraktsiya", "Body": "page17.html" },
+        { "id": "Interfeyslar", "Body": "page18.html" }
       ]
     }
   ]

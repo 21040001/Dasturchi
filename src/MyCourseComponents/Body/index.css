@@ -4,17 +4,24 @@
 
 }
 .Body .list{
-    width: 30%;
+    width: 35%;
     background-color: #121212;
     color: aliceblue;
     padding: 20px;
+    overflow-y: scroll;
+}
+.Body .list::-webkit-scrollbar{
+    display: none;
 }
 .Body .listBody{
     background-color: #1c1b1b;
     width: 100%;
     padding: 30px;
     color: aliceblue;
-    overflow: scroll;
+    overflow-y: scroll;
+}
+.Body .listBody::-webkit-scrollbar{
+    display: none;
 }
 .Body .list ul {
     list-style-type: none; /* Liste başındaki noktaları kaldırır */
@@ -22,19 +29,13 @@
 }
 
 .Body .list ul li {
-    padding: 5px 10px;
+    padding: 2px 10px;
     text-align: start;
     cursor: pointer;
 }
-.Body .list ul li:hover {
-    background: #1c1b1b;
+.Body .list ul li ul li:hover{
+    background-color: #1c1b1b;
 }
- .Body .listBody img{
-    width: 100%;
-    border-radius: 10px;
-    margin: 20px;
- }
- .Body .listBody h2{
-    color: burlywood;
- }
+ 
+ 
 

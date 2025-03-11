@@ -1,6 +1,8 @@
 import "./index.css";
-import img from "../../Images/man.png"
+import { useTranslation } from 'react-i18next';
 function Project() {
+
+    const { t, i18n } = useTranslation();
 
     return (
         <div className="project">
@@ -8,22 +10,21 @@ function Project() {
 
             </div>
             <div className="body">
-                <h3>My <span>projects</span></h3>
+                <h3>{t("My")} <span> {t("MyProject")}</span></h3>
                 <div className="cards">
                     <div className="card">
                         <h4>Web shopping</h4>
-                        <p>Webshopping.uz, kullanıcıların çeşitli web elemanlarını hazır olarak bulabileceği ve kendi işlerinin web sitelerini kolayca hazırlayabileceği bir online alışveriş platformudur. Bu projeyi geliştirirken, kullanıcı dostu ve modern bir arayüz sunmayı hedefledik.
-                        </p>
+                        <p>{t("WebShopping")} </p>
                         <a href="https://webshopping.uz/products">Project</a>
                     </div>
                     <div className="card">
                         <h4>RAPQON DRY FRUITS EXPORT</h4>
-                        <p>DryFruitExport.uz, React.js, JavaScript ve CSS kullanılarak geliştirilmiş modern bir web platformudur. Kullanıcı dostu arayüzü ve dinamik tasarımı ile yüksek kaliteli kuru meyve ve kuruyemiş ihracatını kolaylaştırmayı hedefler.</p>
+                        <p>{t("DryFruit")}</p>
                         <a href="https://dryfruitexport.uz/">Project</a>
                     </div>
                     <div className="card">
                         <h4>Hastane Randevu Sistemi</h4>
-                        <p>Bu projemiz bir hastane randevu sistemidir, kullanilan teknolojiler Swing, Java, Spring boot, Spring framework, Sql, Hibernate, JDBC, Maven gibi teknolojiler kulanildi. Kullanilan mimari turu "Katmanlı (Layered) Mimari</p>
+                        <p>{t("Hospital")}</p>
                         <a href="https://github.com/21040001/Hastane-Randevu-sistemi">Project</a>
                     </div>
                     
@@ -32,17 +33,17 @@ function Project() {
                    
                     <div className="card">
                         <h4>Kim Tezroq</h4>
-                        <p>Kim-Tezroq, Android Studio ve Java kullanılarak geliştirilmiş bir refleks ve hızlı düşünme oyunudur. Kullanıcıların en kısa sürede doğru yanıtları vermesini hedefleyen bu interaktif oyun, akıcı ve kullanıcı dostu bir deneyim sunar.</p>
+                        <p>{t("WhoFaster")}</p>
                         <a href="https://github.com/21040001/Kim-Tezroq">Project</a>
                     </div>
                     <div className="card">
                         <h4>We started</h4>
-                        <p>WeStarted, girişimciler ve işletmeler için modern çözümler sunan bir platformdur. React.js, JavaScript ve Firebase kullanılarak geliştirilmiş olup, kullanıcı dostu arayüzü ile dijital projelerinizi yönetmenize ve büyütmenize yardımcı olur.</p>
+                        <p>{t("WeStarted")}</p>
                         <a href="https://westarted.com.tr/">Project</a>
                     </div>
                     <div className="card">
                         <h4>Moda sari</h4>
-                        <p>Moda-Sari, kullanıcıların en trend moda ürünlerini keşfetmesine ve alışveriş yapmasına olanak tanıyan bir e-ticaret platformudur. Android Studio ve Java kullanılarak geliştirilmiş olup, modern ve kullanıcı dostu bir alışveriş deneyimi sunar.</p>
+                        <p>{t("ModaSari")}</p>
                         <a href="https://github.com/21040001/Moda-sari">Project</a>
                     </div>
                 </div>

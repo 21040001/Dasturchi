@@ -28,3 +28,25 @@
     display: flex;
     gap: 20px;
 }
+
+.header .navbar .navMenu{
+    display: none ;
+    position: fixed;
+    background-color: #303030;
+    top: 10px;
+    left: 10px;
+    width: 70%;
+}
+.header .navbar .spanMenu{
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .header .navbar div {
+        display: none;
+        gap: 20px;
+    }
+    .header .navbar .spanMenu{
+        display: block;
+    }
+}

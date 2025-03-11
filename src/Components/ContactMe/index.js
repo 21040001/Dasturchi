@@ -1,16 +1,18 @@
 import React from "react";
 import "./index.css"; // Stil dosyası
-
+import { useTranslation } from 'react-i18next';
 function Contact() {
+
+    const { t, i18n } = useTranslation();
+
     return (
         <div className="contact">
             <div className="navbar" />
             <div className="contact-container">
-
                 <div className="contact-box">
                     <h2>CONTACT ME</h2>
                     <p>
-                    İletişime geçmekten çekinmeyin! Herhangi bir sorunuz veya talebiniz için yardımcı olmaktan mutluluk duyarım. Mesajınızı bırakın, en kısa sürede geri dönüş yapacağım.
+                    {t("TextContactME")} 
                     </p>
                     <div className="contact-info">
                         <h3>Address</h3>

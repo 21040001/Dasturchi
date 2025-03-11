@@ -32,10 +32,26 @@
     padding: 2px 10px;
     text-align: start;
     cursor: pointer;
+    
 }
 .Body .list ul li ul li:hover{
     background-color: #1c1b1b;
 }
+
+
  
- 
+@media (max-width: 750px) {
+    .Body .list{
+        width: 50%;
+        background-color: #121212;
+        color: aliceblue;
+        padding: 20px;
+        overflow-y: scroll;
+    }
+    .Body .list ul li ul li{
+        border: 1px solid rgb(63, 63, 63);
+        margin-top: 3px;
+        overflow-x: hidden;
+    }
+}
 

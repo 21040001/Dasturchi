@@ -54,3 +54,41 @@
 .home .body  span{
     color: burlywood;
 }
+.home .navbar svg{
+    display: none;
+}
+.home .navbar .navMenu{
+    display: none ;
+    position: fixed;
+    background-color: #303030;
+    top: 10px;
+    left: 10px;
+    width: 70%;
+}
+.home .navbar .spanMenu{
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .home .navbar div{
+        display:none;
+    }
+    .home .navbar svg{
+        display: block;
+    }
+    .home .body .imgCart{
+        display: none;
+    }
+    .home .body .text{
+        width: 100%;
+    }
+    .home .navbar .spanMenu{
+        display: block;
+    }
+    .home .body{
+        display: flex;
+        color: #FFFFFF;
+        height: 90vh;
+        align-items: center;
+    }
+}

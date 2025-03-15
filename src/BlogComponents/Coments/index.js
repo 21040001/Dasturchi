@@ -8,7 +8,7 @@ function Comments() {
             <ul>
                 <li>
                     <div className="commentArea">
-                        <img src={img}></img>
+                        <img src={img} alt=""></img>
                         <div>
                             <h6>
                                 <b>

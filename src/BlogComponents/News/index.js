@@ -7,7 +7,7 @@ function News() {
             <h1>Articles</h1>
             <div className="row2">
                 <div className="firstColumn">
-                    <img src={img}></img>
+                    <img src={img} alt=""></img>
 
                     <h2>She was quite silent for a minute or two</h2>
                     <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
@@ -27,7 +27,7 @@ function News() {
                             </div>
                         </li>
                         <li>
-                            <img src={img}></img>
+                            <img src={img} alt=""></img>
                             <div>
                                 <h4>Idly digging his toes in the sand</h4>
                                 <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
@@ -36,7 +36,7 @@ function News() {
                             </div>
                         </li>
                         <li>
-                            <img src={img}></img>
+                            <img src={img} alt=""></img>
                             <div>
                                 <h4>Idly digging his toes in the sand</h4>
                                 <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
@@ -45,7 +45,7 @@ function News() {
                             </div>
                         </li>
                         <li>
-                            <img src={img}></img>
+                            <img src={img} alt=""></img>
                             <div>
                                 <h4>Idly digging his toes in the sand</h4>
                                 <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
@@ -54,7 +54,7 @@ function News() {
                             </div>
                         </li>
                         <li>
-                            <img src={img}></img>
+                            <img src={img} alt=""></img>
                             <div>
                                 <h4>Idly digging his toes in the sand</h4>
                                 <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
@@ -63,7 +63,7 @@ function News() {
                             </div>
                         </li>
                         <li>
-                            <img src={img}></img>
+                            <img src={img} alt=""></img>
                             <div>
                                 <h4>Idly digging his toes in the sand</h4>
                                 <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
@@ -76,37 +76,37 @@ function News() {
                 <div className="thridColumn">
                     <ul>
                         <li>
-                            <img></img>
+                            <img alt=""></img>
                             <h4>Idly digging his toes in the sand</h4>
                             <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
                         </li>
                         <li>
-                            <img></img>
+                            <img alt=""></img>
                             <h4>Idly digging his toes in the sand</h4>
                             <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
                         </li>
                         <li>
-                            <img></img>
+                            <img alt=""></img>
                             <h4>Idly digging his toes in the sand</h4>
                             <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
                         </li>
                         <li>
-                            <img></img>
+                            <img alt=""></img>
                             <h4>Idly digging his toes in the sand</h4>
                             <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
                         </li>
                         <li>
-                            <img></img>
+                            <img alt=""></img>
                             <h4>Idly digging his toes in the sand</h4>
                             <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
                         </li>
                         <li>
-                            <img></img>
+                            <img alt=""></img>
                             <h4>Idly digging his toes in the sand</h4>
                             <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
                         </li>
                         <li>
-                            <img></img>
+                            <img alt=""></img>
                             <h4>Idly digging his toes in the sand</h4>
                             <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
                         </li>

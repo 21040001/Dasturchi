@@ -24,7 +24,7 @@ function Home() {
                     <a href="/"><span>{t("Home")}</span></a>
                     <a href="/course"><span>{t("MyCourse")}</span></a>
                     <a href="/blogs"><span>{t("MyBlog")}</span></a>
-                    <span>{t("MyContact")}</span>
+                    <a href="/contactMe"><span>{t("MyContact")}</span></a>
                 </div>
                 <div>
                     <span onClick={() => handleClick("uz")}>uzb</span> {/* Tilni uzbekcha qilish */}

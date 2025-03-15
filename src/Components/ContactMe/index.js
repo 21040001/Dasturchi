@@ -1,53 +1,98 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css"; // Stil dosyası
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import { setDoc, doc } from "firebase/firestore";
+import { db } from "../../Firebase/firebase.js";
+
 function Contact() {
+  const { t } = useTranslation();
+  const [isim, setIsim] = useState("");
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
 
-    const { t, i18n } = useTranslation();
+  const submitButton = async (event) => {
+    event.preventDefault(); // Sayfanın yenilenmesini önler
 
-    return (
-        <div className="contact">
-            <div className="navbar" />
-            <div className="contact-container">
-                <div className="contact-box">
-                    <h2>CONTACT ME</h2>
-                    <p>
-                    {t("TextContactME")} 
-                    </p>
-                    <div className="contact-info">
-                        <h3>Address</h3>
-                        <p>Altindag, Ankara, Turikiye</p>
-                        <h3>Phone</h3>
-                        <p>+90 534-295-3667</p>
-                        <h3>Email</h3>
-                        <p>Abdurazzoqovdavronbek3@gmail.com</p>
-                    </div>
-                </div>
-                <div className="form-box">
-                    <h4>GET IN TOUCH</h4>
-                    <form>
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="floatingInput" />
-                            <label for="floatingInput">Name</label>
-                        </div>
-                        <div class="form-floating ">
-                            <input type="text" class="form-control" id="floatingInput" />
-                            <label for="floatingInput">Email</label>
-                        </div>
-                        <div class="form-floating ">
-                            <input type="text" class="form-control" id="floatingInput" />
-                            <label for="floatingInput">Phone Number</label>
-                        </div>
-                        <div class="form-floating">
-                            <textarea class="form-control " text="Leave a comment here" id="floatingTextarea2" ></textarea>
-                            <label for="floatingTextarea2">Comments</label>
-                        </div>
-                        <input class="btn btn-primary" type="submit" value="Send message" />
-                    </form>
-                </div>
-            </div>
+    try {
+      await setDoc(doc(db, "Messages", "customID-" + email), {
+        name: isim,
+        number: number,
+        email: email,
+        message: message,
+      });
+      console.log("Belge başarıyla eklendi");
+    } catch (e) {
+      console.error("Hata oluştu: ", e);
+    }
+  };
+
+  return (
+    <div className="contact">
+      <div className="navbar" />
+      <div className="contact-container">
+        <div className="contact-box">
+          <h2>CONTACT ME</h2>
+          <p>{t("TextContactME")}</p>
+          <div className="contact-info">
+            <h3>Address</h3>
+            <p>Altindag, Ankara, Türkiye</p>
+            <h3>Phone</h3>
+            <p>+90 534-295-3667</p>
+            <h3>Email</h3>
+            <p>Abdurazzoqovdavronbek3@gmail.com</p>
+          </div>
         </div>
-    );
+        <div className="form-box">
+          <h4>GET IN TOUCH</h4>
+          <form onSubmit={submitButton}>
+            <div className="form-floating">
+              <input
+                type="text"
+                className="form-control"
+                value={isim}
+                onChange={(e) => setIsim(e.target.value)}
+                placeholder="Name"
+              />
+              <label>Name</label>
+            </div>
+            <div className="form-floating">
+              <input
+                type="email"
+                className="form-control"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email"
+              />
+              <label>Email</label>
+            </div>
+            <div className="form-floating">
+              <input
+                type="tel"
+                className="form-control"
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
+                placeholder="Phone Number"
+              />
+              <label>Phone Number</label>
+            </div>
+            <div className="form-floating">
+              <textarea
+                className="form-control"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Leave a comment here"
+              ></textarea>
+              <label>Comments</label>
+            </div>
+            <button className="btn btn-primary" type="submit">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Contact;

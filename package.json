@@ -5,15 +5,16 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
-    "firebase": "^11.3.0",
+    "firebase": "^10.7.1",
     "i18next": "^24.2.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-i18next": "^15.4.1",
     "react-scripts": "5.0.1",
     "reactstrap": "^9.2.3",
     "typescript": "^5.8.2",
-    "web-vitals": "^4.2.4"
+    "web-vitals": "^4.2.4",
+    "react-router-dom": "^7.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,8 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "react-router-dom": "^7.2.0"
   }
 }

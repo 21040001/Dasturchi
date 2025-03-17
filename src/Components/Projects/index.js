@@ -27,10 +27,10 @@ function Project() {
                         <p>{t("Hospital")}</p>
                         <a href="https://github.com/21040001/Hastane-Randevu-sistemi">Project</a>
                     </div>
-                    
+
                 </div>
                 <div className="cards">
-                   
+
                     <div className="card">
                         <h4>Kim Tezroq</h4>
                         <p>{t("WhoFaster")}</p>
@@ -45,6 +45,20 @@ function Project() {
                         <h4>Moda sari</h4>
                         <p>{t("ModaSari")}</p>
                         <a href="https://github.com/21040001/Moda-sari">Project</a>
+                    </div>
+
+                </div>
+                <div className="cards">
+                    <div className="card">
+                        <h4>Carrier API</h4>
+                        <p>{t("Carrier")}</p>
+                        <a href="https://github.com/WeStarted02/CarrierAPI">Project</a>
+                    </div>
+                    <div className="card">
+                        <h4>Carrier</h4>
+                        <p>{t("CarrierWeb")}</p>
+                        <a href="https://youtu.be/d8JXg_b0Gpo">Project</a> <br/>
+                        <a href="https://github.com/WeStarted02/career" className="mb-4">Project Code</a>
                     </div>
                 </div>
             </div>

@@ -32,7 +32,12 @@ function Header() {
                     <a class="nav-link active" aria-current="page" href="/"><span>{t("Home")}</span></a>
                     <a class="nav-link" href="/course"><span>{t("MyCourse")}</span></a>
                     <a class="nav-link" href="/blogs"><span>{t("MyBlog")}</span></a>
-                    <a class="nav-link " href="#" ><span>{t("MyContact")}</span></a>
+                    <a class="nav-link " href="/ContactMe" ><span>{t("MyContact")}</span></a>
+                    <br />
+                    <span onClick={() => handleClick("uz")} class="ms-3"> uzb</span> {/* Tilni uzbekcha qilish */}
+                    <span onClick={() => handleClick("tr")} class="ms-3"> tr</span> {/* Tilni turkcha qilish */}
+                    <span onClick={() => handleClick("en")} class="ms-3"> en</span> {/* Tilni inglizcha qilish */}
+                    <br /> <span>.</span>
                 </nav>
                 <span  className="spanMenu" onClick={openNav}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">

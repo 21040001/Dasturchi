@@ -10,9 +10,13 @@ function HomePage() {
     return (
         <div>
             <Helmet>
-                <title>About Me - Davronbek Abdurazzokov</title>
-                <meta name="description" content="Learn more about Davronbek Abdurazzokov and his projects." />
-
+                <title>Davronbek Abdurazzokov | Home</title>
+                <meta name="description" content="Welcome to the portfolio of Davronbek Abdurazzokov. Explore my projects and skills." />
+                <meta name="keywords" content="Davronbek, Abdurazzokov, portfolio, dasturchi, dasturlash, developer, projects" />
+                <meta property="og:title" content="Davronbek Abdurazzokov | Portfolio" />
+                <meta property="og:description" content="Check out the amazing portfolio of Davronbek Abdurazzokov." />
+                <meta property="og:type" content="website" />
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <Home />
             <Project />

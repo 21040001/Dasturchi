@@ -3,7 +3,7 @@ import "./index.css"; // Stil dosyası
 import { useTranslation } from "react-i18next";
 import { setDoc, doc } from "firebase/firestore";
 import { db } from "../../Firebase/firebase.js";
-
+import { Helmet } from "react-helmet-async";
 function Contact() {
   const { t } = useTranslation();
   const [isim, setIsim] = useState("");
@@ -29,6 +29,13 @@ function Contact() {
 
   return (
     <div className="contact">
+       <Helmet>
+        <title>Contact - Davronbek Abdurazzokov</title>
+        <meta name="description" content="Get in touch with me for collaborations and projects." />
+        <meta name="keywords" content="Davronbek, Abdurazzokov, contact, email, projects" />
+        <meta property="og:title" content="Contact Davronbek Abdurazzokov" />
+        <meta property="og:description" content="Reach out to me for exciting projects and opportunities." />
+      </Helmet>
       <div className="navbar" />
       <div className="contact-container">
         <div className="contact-box">

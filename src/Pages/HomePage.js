@@ -10,9 +10,9 @@ function HomePage() {
     return (
         <div>
             <Helmet>
-                <title>Contact Us - My Website</title>
-                <meta name="description" content="Get in touch with us for any inquiries." />
-                <meta property="og:title" content="Contact Us - My Website" />
+                <title>About Me - Davronbek Abdurazzokov</title>
+                <meta name="description" content="Learn more about Davronbek Abdurazzokov and his projects." />
+
             </Helmet>
             <Home />
             <Project />

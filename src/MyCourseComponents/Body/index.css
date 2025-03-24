@@ -2,6 +2,7 @@
     display: flex;
     height: 100vh;
     flex-direction: row;
+    background-color: #121212;
 }
 
 /* Sol taraf - Liste */
@@ -74,6 +75,8 @@
 @media (max-width: 750px) {
     .Body {
         flex-direction: column;
+        height: 100vh;
+        background-color: #121212;
     }
 
     .Body .list {

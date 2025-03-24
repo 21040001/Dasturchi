@@ -16,10 +16,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="blogs" element={<NoPage />} />
-          <Route path="course" element={<CoursePage />} />
-          <Route path="read" element={<ReadPage />} />
-          <Route path="contactMe" element={<Contact />} />
+          <Route path="/blogs" element={<NoPage />} />
+          <Route path="/course" element={<CoursePage />} />
+          <Route path="/read" element={<ReadPage />} />
+          <Route path="/contactMe" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

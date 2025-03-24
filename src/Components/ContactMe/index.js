@@ -29,13 +29,7 @@ function Contact() {
 
   return (
     <div className="contact">
-       <Helmet>
-        <title>Contact - Davronbek Abdurazzokov</title>
-        <meta name="description" content="Get in touch with me for collaborations and projects." />
-        <meta name="keywords" content="Davronbek, Abdurazzokov, contact, email, projects" />
-        <meta property="og:title" content="Contact Davronbek Abdurazzokov" />
-        <meta property="og:description" content="Reach out to me for exciting projects and opportunities." />
-      </Helmet>
+      
       <div className="navbar" />
       <div className="contact-container">
         <div className="contact-box">

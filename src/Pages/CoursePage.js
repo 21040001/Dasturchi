@@ -8,12 +8,10 @@ function CoursePage() {
         <div>
             <Helmet>
                 <title>Davronbek Abdurazzokov | Course</title>
-                <meta name="description" content="Welcome to the portfolio of Davronbek Abdurazzokov. Explore my projects, courses and skills." />
+                <meta name="description" content="Men birgalikda Dasturlashni har qanday bir to'lovlarsiz tekinga o'rganing" />
                 <meta name="keywords" content="Davronbek's Courses, Abdurazzokov Course, portfolio, course, kurslar, Dasturchi, projects, proyektlar " />
-                <meta property="og:title" content="Davronbek Abdurazzokov | Courses" />
-                <meta property="og:description" content="Course of Davronbek Abdurazzokov." />
-                <meta property="og:type" content="website" />
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="title" content="Davronbek Abdurazzokov | Courses" />
+                <meta property="type" content="website" />
             </Helmet>
             <Header></Header>
             <Navbar></Navbar>

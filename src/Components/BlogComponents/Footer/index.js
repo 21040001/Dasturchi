@@ -223,7 +223,7 @@ function Footer() {
                     </p>
                 </Col>
                 <Col>
-                    <p class="text-end ">@2023 dasturchi.com</p>
+                    <p class="text-end ">@2023 www.davronbek-dev.uz</p>
                 </Col>
             </Row>
         </div>

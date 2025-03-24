@@ -21,12 +21,12 @@ function HomePage() {
         <div>
             <Helmet>
                 <title>Davronbek Abdurazzokov | Home</title>
-                <meta name="description" content="Welcome to the portfolio of Davronbek Abdurazzokov. Explore my projects and skills." />
+                <meta name="description" content="Davronbek Abdurazzokov" />
                 <meta name="keywords" content="Davronbek, Abdurazzokov, portfolio, dasturchi, dasturlash, developer, projects" />
-                <meta property="og:title" content="Davronbek Abdurazzokov | Portfolio" />
-                <meta property="og:description" content="Check out the amazing portfolio of Davronbek Abdurazzokov." />
-                <meta property="og:type" content="website" />
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="title" content="Davronbek Abdurazzokov | Portfolio" />
+                <meta property="description" content="Men bilan birgalikda dasturlashni 0'dan, hech qanday to'lo'vlarsiz o'rganing." />
+                <meta property="type" content="website" />
+                
             </Helmet>
             <Home />
             <Project />

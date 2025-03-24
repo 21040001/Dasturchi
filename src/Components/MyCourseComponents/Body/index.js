@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import jsonData from '../../Data/Java.json';
+import jsonData from '../../../Data/Java.json';
 import './index.css';
 
 function Body() {

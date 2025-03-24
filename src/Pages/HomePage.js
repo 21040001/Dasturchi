@@ -1,7 +1,7 @@
 import Contact from "../Components/ContactMe";
 import Project from "../Components/Projects";
 import Skill from "../Components/Skills";
-import Footer from "../BlogComponents/Footer";
+import Footer from "../Components/BlogComponents/Footer";
 import Home from "../Components/Home";
 import { Helmet } from "react-helmet-async";
 import "./style.css"

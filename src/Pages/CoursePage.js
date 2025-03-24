@@ -1,7 +1,7 @@
-import Header from "../MyCourseComponents/Header";
-import Navbar from "../MyCourseComponents/Navbar";
-import Body from "../MyCourseComponents/Body";
-import Footer from "../BlogComponents/Footer";
+import Header from "../Components/MyCourseComponents/Header";
+import Navbar from "../Components/MyCourseComponents/Navbar";
+import Body from "../Components/MyCourseComponents/Body";
+import Footer from "../Components/BlogComponents/Footer";
 import { Helmet } from "react-helmet-async";
 function CoursePage() {
     return (

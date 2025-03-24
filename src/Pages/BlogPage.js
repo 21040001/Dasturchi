@@ -1,7 +1,7 @@
-import LastNews from "../BlogComponents/LastNews";
-import News from "../BlogComponents/News";
-import Footer from "../BlogComponents/Footer";
-import BlogHeader from "../BlogComponents/Header";
+import LastNews from "../Components/BlogComponents/LastNews";
+import News from "../Components/BlogComponents/News";
+import Footer from "../Components/BlogComponents/Footer";
+import BlogHeader from "../Components/BlogComponents/Header";
 import { Helmet } from "react-helmet-async";
 function BlogPage() {
     return (

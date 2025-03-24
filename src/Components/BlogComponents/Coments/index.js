@@ -1,5 +1,5 @@
 import "./index.css";
-import img from "../../Images/git.png"
+import img from "../../../Images/git.png"
 function Comments() {
 
     return (

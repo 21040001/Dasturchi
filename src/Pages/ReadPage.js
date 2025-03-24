@@ -1,7 +1,7 @@
-import BlogHeader from "../BlogComponents/Header";
-import ReadBlog from "../BlogComponents/ReadBlogs";
-import Comments from "../BlogComponents/Coments";
-import Footer from "../BlogComponents/Footer";
+import BlogHeader from "../Components/BlogComponents/Header";
+import ReadBlog from "../Components/BlogComponents/ReadBlogs";
+import Comments from "../Components/BlogComponents/Coments";
+import Footer from "../Components/BlogComponents/Footer";
 import { Helmet } from "react-helmet-async";
 import "./style.css";
 function ReadPage() {

@@ -1,17 +1,21 @@
 import "./index.css";
-
-import img from "../../Images/trump.jpg"
-function ReadBlog() {
+import img from "../../../Images/man.png"
+function News() {
 
     return (
-        <div className="readBlog">
-            <div className="firstColumn">
-                <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
-                <h2>She was quite silent for a minute or two</h2>
-                <img src={img}></img>
-                <p className="pText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-            <div className="secondColumn">
+        <div className="news">
+            <h1>Articles</h1>
+            <div className="row2">
+                <div className="firstColumn">
+                    <img src={img} alt=""></img>
+
+                    <h2>She was quite silent for a minute or two</h2>
+                    <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
+                    <div class="text">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır.
+                    </div>
+                    <h6>Read more</h6>
+                </div>
+                <div className="secondColumn">
                     <ul>
                         <li>
                             <img src={img}></img>
@@ -23,7 +27,7 @@ function ReadBlog() {
                             </div>
                         </li>
                         <li>
-                            <img src={img}></img>
+                            <img src={img} alt=""></img>
                             <div>
                                 <h4>Idly digging his toes in the sand</h4>
                                 <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
@@ -32,7 +36,7 @@ function ReadBlog() {
                             </div>
                         </li>
                         <li>
-                            <img src={img}></img>
+                            <img src={img} alt=""></img>
                             <div>
                                 <h4>Idly digging his toes in the sand</h4>
                                 <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
@@ -41,7 +45,7 @@ function ReadBlog() {
                             </div>
                         </li>
                         <li>
-                            <img src={img}></img>
+                            <img src={img} alt=""></img>
                             <div>
                                 <h4>Idly digging his toes in the sand</h4>
                                 <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
@@ -50,7 +54,7 @@ function ReadBlog() {
                             </div>
                         </li>
                         <li>
-                            <img src={img}></img>
+                            <img src={img} alt=""></img>
                             <div>
                                 <h4>Idly digging his toes in the sand</h4>
                                 <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
@@ -59,7 +63,7 @@ function ReadBlog() {
                             </div>
                         </li>
                         <li>
-                            <img src={img}></img>
+                            <img src={img} alt=""></img>
                             <div>
                                 <h4>Idly digging his toes in the sand</h4>
                                 <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
@@ -69,9 +73,49 @@ function ReadBlog() {
                         </li>
                     </ul>
                 </div>
-            
+                <div className="thridColumn">
+                    <ul>
+                        <li>
+                            <img alt=""></img>
+                            <h4>Idly digging his toes in the sand</h4>
+                            <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
+                        </li>
+                        <li>
+                            <img alt=""></img>
+                            <h4>Idly digging his toes in the sand</h4>
+                            <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
+                        </li>
+                        <li>
+                            <img alt=""></img>
+                            <h4>Idly digging his toes in the sand</h4>
+                            <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
+                        </li>
+                        <li>
+                            <img alt=""></img>
+                            <h4>Idly digging his toes in the sand</h4>
+                            <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
+                        </li>
+                        <li>
+                            <img alt=""></img>
+                            <h4>Idly digging his toes in the sand</h4>
+                            <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
+                        </li>
+                        <li>
+                            <img alt=""></img>
+                            <h4>Idly digging his toes in the sand</h4>
+                            <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
+                        </li>
+                        <li>
+                            <img alt=""></img>
+                            <h4>Idly digging his toes in the sand</h4>
+                            <p><span>Davronbek</span> * <span>August 17, 2025</span></p>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
         </div>
-        );
+    );
 }
 
-export default ReadBlog;
+export default News;

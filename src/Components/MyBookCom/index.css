@@ -1,0 +1,35 @@
+.myBook{
+    display: grid;
+}
+.myBook .body{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-direction: row;
+    justify-items: center;
+    align-self: center;
+    background-color: #121212;
+}
+.myBook .body .cardB{
+    display: grid;
+    height: 300px;
+    width: 200px;
+    border: 2px solid rgb(85, 84, 84);
+}
+.myBook .body .cardB .card-img  {
+    margin-top: 5px;
+    height: 200px;
+    width: 150px;
+    justify-self: center;
+}
+.myBook .body .cardB .card-body{
+    display: grid;
+}
+.myBook .body .cardB .card-body .card-title{
+    justify-self: center;
+    color: burlywood;
+    font-size: medium;
+    font-weight: 120px;
+}
+.myBook .body .cardB .card-body .download{
+    justify-self: center;
+}

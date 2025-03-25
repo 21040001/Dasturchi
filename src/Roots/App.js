@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NoPage from "../Pages/NonePage";
 import Contact from "../Components/ContactMe";
 import { HelmetProvider } from "react-helmet-async";
+import MyBookPage from "../Pages/MyBookPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/course" element={<CoursePage />} />
           <Route path="/read" element={<ReadPage />} />
           <Route path="/contactMe" element={<Contact />} />
+          <Route path="/books" element={<MyBookPage />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

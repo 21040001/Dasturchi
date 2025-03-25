@@ -9,7 +9,7 @@ function MyBooks() {
                     <img src={imgKapak} class="card-img" alt="..."/>
                         <div class="card-body">
                             <h5 class="card-title">Java || Davronbek</h5>
-                             <a href="#" class="download">Download</a>
+                             <a href="/java.pdf" class="download">Download</a>
                         </div>
                 </div>
             </div>

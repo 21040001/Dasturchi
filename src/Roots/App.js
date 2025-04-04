@@ -10,6 +10,7 @@ import NoPage from "../Pages/NonePage";
 import Contact from "../Components/ContactMe";
 import { HelmetProvider } from "react-helmet-async";
 import MyBookPage from "../Pages/MyBookPage";
+import JavaCompilerPage from "../Pages/JavaCompilerPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/read" element={<ReadPage />} />
           <Route path="/contactMe" element={<Contact />} />
           <Route path="/books" element={<MyBookPage />} />
+          <Route path="/JavaCompiler" element={<JavaCompilerPage />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

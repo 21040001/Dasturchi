@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 i18next
   .use(initReactI18next) // react-i18next adapterini ulash
   .init({
-    lng: 'uz', // standart til
+    lng: 'tr', // standart til
     resources: {
       uz: {
         translation: {

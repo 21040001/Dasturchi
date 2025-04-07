@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/blogs" element={<NoPage />} />
-          <Route path="/course" element={<CoursePage />} />
+          <Route path="/course" element={<NoPage />} />
           <Route path="/read" element={<ReadPage />} />
           <Route path="/contactMe" element={<Contact />} />
           <Route path="/books" element={<MyBookPage />} />

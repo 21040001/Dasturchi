@@ -11,6 +11,8 @@ import Contact from "../Components/ContactMe";
 import { HelmetProvider } from "react-helmet-async";
 import MyBookPage from "../Pages/MyBookPage";
 import JavaCompilerPage from "../Pages/JavaCompilerPage";
+import SignIn from "../Components/Signs/SignIn";
+import SignUp from "../Components/Signs/SignUp";
 
 function App() {
   return (
@@ -19,10 +21,12 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/blogs" element={<NoPage />} />
-          <Route path="/course" element={<NoPage />} />
+          <Route path="/course" element={<CoursePage />} />
           <Route path="/read" element={<ReadPage />} />
           <Route path="/contactMe" element={<Contact />} />
           <Route path="/books" element={<MyBookPage />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />}/>
           <Route path="/JavaCompiler" element={<JavaCompilerPage />} />
           <Route path="*" element={<NoPage />} />
         </Routes>

@@ -1,0 +1,160 @@
+/*Bu .css fayli master branch tarafidan foydalaniladi*/
+/*o'zgaruvchilarga isim shu shaklda beriladi elementIsmi_JoylashganComponeti_VaBo'limi misol uchun : input_Signin_Rightusername*/
+
+.mt_px{
+    margin-bottom: 0px ;
+}
+
+.a_SignIn_links{
+text-decoration: none;
+}
+
+/*Moslashuvcha ekran SignUp va SignIN uchun*/
+
+@media screen and (min-width : 1000px) {
+    .img_SignIn_Left{
+        margin-bottom: 100px;
+        margin-top: 100px;
+        margin-right: 50px;
+        width: 45%;
+    }
+    .card_SignIn_firstCard{
+        max-width: 45%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        background-color: rgb(114, 10, 211);
+    }
+    .card_SignUp_firstCard{
+        max-width: 45%;
+        margin: auto;
+        background-color: rgb(114, 10, 211);
+    }
+    .button_SignIn_Login{
+        margin-top: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+        background-color: rgb(241, 188, 14);
+    }
+    .card_SignUp_secondCard{
+        padding: 30px;
+        margin-top: 30px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .card_SignIn_secondCard{
+        padding: 30px;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width : 1000px) {
+
+    .container_Sign_body{
+        margin: auto;
+        padding-top: 40px;
+    }
+
+    .img_SignIn_Left{
+       display: none;
+
+    }
+    
+    .card_SignIn_firstCard{
+        max-width: 85%;
+        margin: auto;
+        background-color: rgb(114, 10, 211);
+    }
+
+    .card_SignUp_firstCard{
+        max-width: 85%;
+        margin: auto;
+        background-color: rgb(114, 10, 211);
+    }
+
+    .button_SignIn_Login{
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: rgb(241, 188, 14);
+    }
+    .card_SignUp_secondCard{
+        padding: 30px;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .card_SignIn_secondCard{
+        padding: 30px;
+        margin-top: 50px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width : 521px) {
+    .container_Sign_body{
+        margin: auto;
+        padding-top: 40px;
+    }
+
+    .img_SignIn_Left{
+       display: none;
+
+    }
+    
+    .card_SignIn_firstCard{
+        max-width: 85%;
+        margin-top: 80px !important;
+        margin: auto;
+        background-color: rgb(114, 10, 211);
+    }
+
+    .card_SignUp_firstCard{
+        margin-top: 60px !important;
+        max-width: 85%;
+        margin: auto;
+        background-color: rgb(114, 10, 211);
+    }
+
+    .button_SignIn_Login{
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: rgb(241, 188, 14);
+    }
+    .card_SignUp_secondCard{
+        padding: 30px;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .card_SignIn_secondCard{
+        padding: 30px;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+
+
+/*Forgot password screen css codes*/
+.forgotpass{
+    display: grid;
+    justify-items: center;
+    align-items: center !important;
+}
+.inputPass{
+    width: 320px;
+}
+.inputBtn{
+    width: 200px !important;
+}
+.container{
+    height: 100vh;
+    /*background-color: #1e1e1e;*/
+    color: #f5f5f5;
+    font-family: 'Fira Code', monospace;
+}

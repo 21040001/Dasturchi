@@ -10,7 +10,7 @@ function HomePage() {
     const downloadCV = () => {
         document.getElementById("cvButton").addEventListener("click", function () {
             const link = document.createElement("a");
-            link.href = "/CV.pdf"; // Dosya yolu (aynı klasördeyse bu şekilde)
+            link.href = "https://www.canva.com/design/DAGkszllaiA/MkTCVshkPSCkfscd8RyPYw/view?utm_content=DAGkszllaiA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h114e87063f"; // Dosya yolu (aynı klasördeyse bu şekilde)
             link.download = "cv.pdf"; // İndirilecek dosyanın adı
             document.body.appendChild(link);
             link.click();

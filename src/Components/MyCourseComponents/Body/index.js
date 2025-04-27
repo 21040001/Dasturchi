@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import jsonData from '../../../Data/Java.json';
 import './index.css';
@@ -23,6 +22,21 @@ function Body() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Sayfa ilk yüklendiğinde URL'deki ?page= değerini al
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const pageParam = params.get('page');
+    if (pageParam) {
+      // jsonData'dan doğru belgeyi bul
+      const foundDoc = jsonData.data
+        .flatMap(collection => collection.documents)
+        .find(doc => doc.Body === pageParam);
+      if (foundDoc) {
+        setSelectedDoc(foundDoc);
+      }
+    }
+  }, []);
+
   useEffect(() => {
     if (selectedDoc && selectedDoc.Body) {
       fetch(`/pages/${selectedDoc.Body}`)
@@ -31,6 +45,9 @@ function Body() {
         .catch((error) =>
           console.error('Error loading HTML content:', error)
         );
+
+      // Seçim yapınca URL'i güncelle
+      window.history.pushState({}, '', `?page=${selectedDoc.Body}`);
     } else {
       fetch(`/pages/page1.html`)
         .then((response) => response.text())
@@ -85,7 +102,7 @@ function Body() {
                   >
                     {doc.id}
 
-                    {/* Mobil görünümdeyse içerik buraya gömülür */}
+                    {/* Mobil görünümde içerik direkt burada görünür */}
                     {isMobileView &&
                       selectedDoc?.id === doc.id &&
                       content && (
@@ -108,12 +125,10 @@ function Body() {
         ))}
       </div>
 
-      {/* Masaüstü görünümdeyse içerik sağda ayrı görünür */}
+      {/* Masaüstünde içerik sağda görünür */}
       {!isMobileView && (
         <div className="listBody">
-          <div
-            dangerouslySetInnerHTML={{ __html: content || '' }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: content || '' }} />
         </div>
       )}
     </div>

@@ -15,6 +15,7 @@
         { "id": "O'zgaruvchilar va ma'lumot turlari", "Body": "page5.html" },
         { "id": "Operatorlar", "Body": "page6.html" },
         { "id": "Java shart operatorlari ", "Body": "page7.html" },
+        { "id": "Java Switch-case ", "Body": "page21.html" },
         { "id": "Sikllar (for, while, do-while)", "Body": "page8.html" }
       ]
     },

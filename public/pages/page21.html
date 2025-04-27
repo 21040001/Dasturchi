@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Switch-Case Batafsil Tushuntirishi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .inCode {
+            color: #d63384;
+        }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 20px;">
+
+    <h1>🔥 Java'da Switch-Case Operatoriga Batafsil Kirish</h1>
+
+    <p><strong>switch</strong> operatori - dasturda biror o'zgaruvchining qiymatini tekshirib, unga mos keladigan kod blokini bajarishga yordam beradi. Bu if-else bloklari ko'pligidan qutulish uchun ishlatiladi va kodni yanada o'qilishi oson va tartibli qiladi.</p>
+
+    <h2>🧠 Switch-Case Umumiy Yozilish Formati</h2>
+    <p>Switch-case tuzilmasi quyidagicha ishlaydi: biror <code>expression</code> qiymati beriladi, bu qiymat ketma-ket case'lar bilan solishtiriladi. Agar mos kelgan qiymat topilsa, tegishli kod bajariladi.</p>
+    <pre><code>
+switch (expression) {
+    case value1:
+        // Agar expression value1 ga teng bo'lsa, shu kod bajariladi
+        break;
+    case value2:
+        // Agar expression value2 ga teng bo'lsa, shu kod bajariladi
+        break;
+    case value3:
+        // Agar expression value3 ga teng bo'lsa, shu kod bajariladi
+        break;
+    default:
+        // Agar hech bir case mos kelmasa, default bajariladi
+}
+</code></pre>
+
+    <h2>🎯 Muhim Qoidalar va Cheklovlar</h2>
+    <ul>
+        <li><b>1.</b> Switch faqat <code>byte, short, char, int, enum</code> va <code>String</code> tipidagi ma'lumotlarda ishlaydi. (double, float mos emas)</li>
+        <li><b>2.</b> Har bir <code>case</code> qiymati o'zgarmas (constant) bo'lishi kerak.</li>
+        <li><b>3.</b> Agar <code>break</code> yozilmasa, kod bajarilishi quyidagi case'larga o'tib ketadi (fall-through deb ataladi).</li>
+        <li><b>4.</b> <code>default</code> bloki hech bir case mos kelmasa bajariladi va uni yozish majburiy emas, lekin tavsiya etiladi.</li>
+        <li><b>5.</b> Har bir <code>case</code> qiymati unikal bo'lishi shart, aks holda kompilyator xato beradi.</li>
+    </ul>
+
+    <h2>✍️ Oddiy Misol: Kunlar</h2>
+    <pre><code>
+int kun = 3;
+switch (kun) {
+    case 1:
+        System.out.println("Dushanba");
+        break;
+    case 2:
+        System.out.println("Seshanba");
+        break;
+    case 3:
+        System.out.println("Chorshanba");
+        break;
+    case 4:
+        System.out.println("Payshanba");
+        break;
+    default:
+        System.out.println("Noma'lum kun");
+}
+</code></pre>
+
+    <p><strong>Natija:</strong> Chorshanba chiqariladi, chunki <code>kun=3</code> mos kelmoqda.</p>
+
+    <h2>🐞 Eng Ko'p Uchraydigan Switch-Case Xatolari</h2>
+
+    <h3>1. Break yozilmasa, Fall-Through Yuz Beradi</h3>
+    <p>Agar har bir case'dan so'ng <code>break</code> yozilmasa, kod keyingi case'ga o'tib ketadi, bu esa kutilmagan natijalar beradi.</p>
+    <pre><code>
+int x = 2;
+switch (x) {
+    case 1:
+        System.out.println("Bir");
+    case 2:
+        System.out.println("Ikki");
+    case 3:
+        System.out.println("Uch");
+}
+</code></pre>
+    <p><strong>Natija:</strong> Ikki va Uch chiqadi, chunki break yo'q.</p>
+
+    <h3>2. Takroriy Case Qiymati (Duplicate case)</h3>
+    <p>Agar ikki case bir xil qiymatga ega bo'lsa, dastur kompilyatsiya xatosi beradi.</p>
+    <pre><code>
+int a = 5;
+switch (a) {
+    case 5:
+        System.out.println("Beshlik");
+    case 5: // ❌ Error: Duplicate case label
+        System.out.println("Yana beshlik");
+}
+</code></pre>
+
+    <h3>3. Noto'g'ri Tiplar (Tip Muvofiqsizligi)</h3>
+    <p>Switch operatori double yoki float kabi tiplar bilan ishlay olmaydi.</p>
+    <pre><code>
+double pi = 3.14;
+switch (pi) { // ❌ Error
+    case 3.14:
+        System.out.println("Pi soni");
+}
+</code></pre>
+
+    <h3>4. Default Blok Har Qanday Joyda Bo'lishi Mumkin</h3>
+    <p>Default bloki kod ichida har qanday joyda tursa ham bo'ladi, lekin odatda oxirida yoziladi. Agar default'dan keyin break yozilmasa, quyidagi case'lar bajarilishi mumkin.</p>
+    <pre><code>
+switch (x) {
+    default:
+        System.out.println("Default holat");
+    case 1:
+        System.out.println("Bir");
+        break;
+    case 2:
+        System.out.println("Ikki");
+}
+</code></pre>
+
+    <h3>5. String Tipi Bilan Switch (Java 7+)</h3>
+    <p>Java 7 versiyasidan boshlab <code>String</code> qiymatlari bilan switch ishlatish mumkin.</p>
+    <pre><code>
+String meva = "Olma";
+switch (meva) {
+    case "Olma":
+        System.out.println("Olma tanlandi");
+        break;
+    case "Banan":
+        System.out.println("Banan tanlandi");
+        break;
+    default:
+        System.out.println("Noma'lum meva");
+}
+</code></pre>
+
+    <h2>📚 Qo'shimcha Ma'lumot</h2>
+    <p>Java switch operatori if-else ketma-ketliklariga qaraganda samaraliroq ishlaydi. Chunki kompilyator ichki darajada jump table yoki hash table yaratadi va kerakli case'ga tezda sakraydi.</p>
+
+    <h2>🔥 Super Daraja: Ko'p Case'lar Bitta Amalga Olib Boriladi</h2>
+    <p>Agar bir nechta case'lar bir xil ishni bajarishi kerak bo'lsa, ularni ketma-ket yozib bitta break bilan yakunlash mumkin.</p>
+    <pre><code>
+int haftaKuni = 6;
+switch (haftaKuni) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        System.out.println("Ish kuni");
+        break;
+    case 6:
+    case 7:
+        System.out.println("Dam olish kuni");
+        break;
+    default:
+        System.out.println("Xato kun");
+}
+</code></pre>
+
+    <h2>🔵 Yakuniy Xulosa</h2>
+    <ul>
+        <li>✅ Switch-case kodni tartibga soladi va ko‘proq o'qiladigan holga keltiradi.</li>
+        <li>✅ Har doim case ichida <code>break</code> ishlatishni unutmang, aks holda kod tushunarsiz ishlashi mumkin.</li>
+        <li>✅ Switch faqat mos tiplarda ishlaydi: int, char, enum, String (Java 7+).</li>
+        <li>✅ Default yozish majburiy emas, ammo xatoliklarning oldini olish uchun tavsiya qilinadi.</li>
+    </ul>
+
+</body>
+</html>

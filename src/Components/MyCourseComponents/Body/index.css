@@ -46,7 +46,7 @@
 }
 
 
-/* A C C O R D I O N  */
+
 .accordion-section {
     margin-bottom: 10px;
     border: 1px solid #444;
@@ -70,8 +70,40 @@
     border-radius: 5px;
     color: aliceblue;
 }
-
-/* M O B I L E  G O R U N U M */
+/* Popup Stilleri */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .popup-content {
+    background-color: #1c1b1b;
+    width: 90%;
+    height: 80%;
+    overflow-y: auto;
+    color: aliceblue;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: aliceblue;
+  }
+  
 @media (max-width: 750px) {
     .Body {
         flex-direction: column;
@@ -89,7 +121,7 @@
         margin-top: 3px;
         overflow-x: hidden;
     }
-
+    
     .Body .listBody {
         display: none; /* Mobilde sağdaki alan gösterilmeyecek */
     }

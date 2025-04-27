@@ -13,6 +13,7 @@
       "documents": [
         { "id": "Java dasturining tuzilishi", "Body": "page4.html" },
         { "id": "O'zgaruvchilar va ma'lumot turlari", "Body": "page5.html" },
+        { "id": "O'zgaruvchi turini o'zgartirish", "Body": "page22.html" },
         { "id": "Operatorlar", "Body": "page6.html" },
         { "id": "Java shart operatorlari ", "Body": "page7.html" },
         { "id": "Java Switch-case ", "Body": "page21.html" },

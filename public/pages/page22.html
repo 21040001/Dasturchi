@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Java - O'zgaruvchilar Turlarini O'zgartirish</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+            color: #fff;
+        }
+
+        .inCode {
+            color: #d63384;
+        }
+        
+        h1, h2 {
+            color: #08b419;
+        }
+        
+        .warning {
+            color: rgb(228, 28, 28);
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #f7f2f2;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Java - O'zgaruvchilar Turlarini O'zgartirish (Type Casting)</h1>
+
+<p>
+    Java dasturlash tilida o'zgaruvchilarning turini boshqa turga o'zgartirish jarayoniga <strong>"Type Casting"</strong> deyiladi. Bu jarayon ikki turga bo'linadi:
+</p>
+
+<ul>
+    <li><strong>Implicit (Automatic) Casting</strong> – Avtomatik o'zgarish</li>
+    <li><strong>Explicit Casting</strong> – Majburiy yoki qo'lda o'zgarish</li>
+</ul>
+
+<h2>1. Implicit (Automatic) Casting – Avtomatik O'zgarish</h2>
+<p>Kichik turdagi qiymatlarni katta turga o'tkazishda avtomatik ravishda amalga oshiriladi. Ma’lumot yo‘qolishi xavfi yo‘q. Masalan, integer turidagi sonni avtomatik tarzda double turiga o'tkazish mumkin, chunki double katta hajmli ma'lumot turi hisoblanadi.</p>
+
+<p><strong>Ketma-ketlik:</strong> byte → short → int → long → float → double</p>
+
+<pre>
+int a = 100;
+double b = a; // Avtomatik int → double o'tkazish
+
+System.out.println(b); // Natija: 100.0
+</pre>
+
+<h2>2. Explicit Casting – Qo'lda O'zgarish</h2>
+<p>Katta turdagi qiymatni kichik turga o'tkazishda qo‘lda amalga oshiriladi. Bu yerda ma’lumot yo‘qolishi mumkin. Masalan, double qiymatini integer turiga o'tkazganda sonning o'nlik qismi yo'qoladi.</p>
+
+<p><strong>Ketma-ketlik:</strong> double → float → long → int → short → byte</p>
+
+<pre>
+double x = 55.75;
+int y = (int) x; // Qo‘lda double → int o'tkazish
+
+System.out.println(y); // Natija: 55 (ondalik qism yo‘qoladi)
+</pre>
+
+<p class="warning">Eslatma: Katta sondan kichik songa o‘tganda qiymat chegaradan oshishi mumkin va kutilmagan natijalar chiqarishi mumkin.</p>
+
+<pre>
+int kattaSon = 300;
+byte kichikSon = (byte) kattaSon; // Qiymat chegaradan oshadi
+
+System.out.println(kichikSon); // Natija: 44 (qiymat chegaradan oshgani uchun xato)
+</pre>
+
+<h2>String ↔ Son o'zgarishlari</h2>
+
+<p><strong>String → son:</strong> String tipidagi raqamni haqiqiy raqamga aylantirish uchun maxsus metodlardan foydalaniladi.</p>
+<pre>
+String matn = "123";
+int son = Integer.parseInt(matn);
+
+System.out.println(son + 1); // Natija: 124
+</pre>
+
+<p><strong>Son → String:</strong> Haqiqiy sonni matn ko'rinishiga o'tkazish uchun String.valueOf() metodidan foydalaniladi.</p>
+<pre>
+int son = 456;
+String matn = String.valueOf(son);
+
+System.out.println(matn + "78"); // Natija: "45678"
+</pre>
+
+<h2>char ↔ ASCII qiymatlari</h2>
+
+<p><strong>char → ASCII:</strong> Har bir belgining ASCII kodi mavjud bo‘lib, uni quyidagi usulda ko‘rish mumkin.</p>
+<pre>
+char belgi = 'A';
+int ascii = (int) belgi;
+
+System.out.println(ascii); // Natija: 65
+</pre>
+
+<p><strong>ASCII → char:</strong> ASCII kodidan tegishli belgiga o'tish mumkin.</p>
+<pre>
+int ascii = 66;
+char belgi = (char) ascii;
+
+System.out.println(belgi); // Natija: B
+</pre>
+
+<h2>O'zgarishlar uchun qisqa jadval</h2>
+<table>
+    <tr>
+        <th>Turi</th>
+        <th>Metod</th>
+        <th>Misol</th>
+    </tr>
+    <tr>
+        <td>Implicit (avto)</td>
+        <td>Avtomatik</td>
+        <td>int → double</td>
+    </tr>
+    <tr>
+        <td>Explicit (qo'lda)</td>
+        <td>(veriTuri)</td>
+        <td>double → int</td>
+    </tr>
+    <tr>
+        <td>String → son</td>
+        <td>Integer.parseInt()</td>
+        <td>"10" → 10</td>
+    </tr>
+    <tr>
+        <td>Son → String</td>
+        <td>String.valueOf()</td>
+        <td>10 → "10"</td>
+    </tr>
+    <tr>
+        <td>char ↔ ASCII</td>
+        <td>(int), (char)</td>
+        <td>'A' → 65, 66 → 'B'</td>
+    </tr>
+</table>
+
+<h2>Eslatma va tavsiyalar</h2>
+<ul>
+    <li>Explicit castingda ma'lumot yo'qolishi ehtimolini inobatga oling.</li>
+    <li>Son emas matnlarni sonlarga o'tkazishda <strong>NumberFormatException</strong> xatosiga duch kelishingiz mumkin.</li>
+</ul>
+
+</body>
+</html>

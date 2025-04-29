@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Java ArrayList - Nazariy va Amaliy Darslik</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.7;
+        padding: 20px;
+    }
+    h1 {
+        color: #0a8043;
+    }
+    h2 {
+        color: #1266f1;
+        margin-top: 30px;
+    }
+    pre {
+        background-color: #3f3c3c;
+        padding: 10px;
+        border-radius: 5px;
+        overflow: auto;
+        color: #fff;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 10px;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+    }
+    code {
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+    ul {
+        margin-left: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Java'da ArrayList - Nazariy va Amaliy To‘liq Tushuntirish</h1>
+
+<h2>1. ArrayList nima?</h2>
+<p>
+  <b>ArrayList</b> — Java dasturlash tilida <b>Collection Framework</b> ning bir qismi bo‘lib, o‘lchami avtomatik kengayadigan yoki qisqaradigan <b>dasturiy massiv</b> turidir.
+</p>
+<p>
+  Oddiy massiv (<code>Array</code>) Java'da belgilangan o‘lchamga ega. U yaratib bo‘lingandan keyin hajmini o‘zgartirib bo‘lmaydi. <br>
+  <strong>ArrayList</strong> esa, kerak bo‘lsa o‘zi avtomatik kengayadi, kerak bo‘lsa qisqaradi.
+</p>
+
+<h2>2. Array va ArrayList farqlari</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Array</th>
+      <th>ArrayList</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>O'lchami qat'iy, o'zgarmaydi</td>
+      <td>O'lchami o'zgaruvchi (dynamic)</td>
+    </tr>
+    <tr>
+      <td>Oddiy malumot turlari (int, double) uchun ishlaydi</td>
+      <td>Faqat obyektlar bilan ishlaydi (Integer, String, va h.k.)</td>
+    </tr>
+    <tr>
+      <td>Elementlarga indeks bilan murojaat</td>
+      <td>Elementlarga indeks bilan ham, metodlar bilan ham ishlov beriladi</td>
+    </tr>
+    <tr>
+      <td>Tizim resursini kam ishlatadi</td>
+      <td>Qulayliklar uchun ko'proq resurs talab qiladi</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. ArrayList yaratish</h2>
+
+<p>
+  <b>ArrayList</b> ishlatishdan oldin uni <code>import java.util.ArrayList;</code> orqali chaqirish kerak. 
+</p>
+
+<pre><code>import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList&lt;String&gt; mevalar = new ArrayList&lt;&gt;();
+    }
+}
+</code></pre>
+
+<p>
+  Yuqoridagi kodda <code>ArrayList&lt;String&gt;</code> tipi ko'rsatilgan. Bu <b>mevalar</b> ro'yxati faqat <b>String</b> turlarini saqlashini bildiradi.
+</p>
+
+<h2>4. ArrayList metodlari</h2>
+
+<p>ArrayListda ishlatiladigan asosiy metodlar:</p>
+
+<ul>
+  <li><code>add(element)</code> – yangi element qo‘shadi</li>
+  <li><code>get(index)</code> – indeksdagi elementni qaytaradi</li>
+  <li><code>set(index, element)</code> – indeksdagi elementni almashtiradi</li>
+  <li><code>remove(index yoki element)</code> – elementni olib tashlaydi</li>
+  <li><code>clear()</code> – barcha elementlarni o‘chiradi</li>
+  <li><code>size()</code> – elementlar sonini qaytaradi</li>
+  <li><code>isEmpty()</code> – bo‘sh yoki bo‘lmasligini tekshiradi</li>
+  <li><code>contains(element)</code> – element bor-yo‘qligini tekshiradi</li>
+</ul>
+
+<h2>5. ArrayList bilan amaliy ishlash</h2>
+
+<pre><code>import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList&lt;String&gt; mevalar = new ArrayList&lt;&gt;();
+
+        // Elementlar qo'shish
+        mevalar.add(\"Olma\");
+        mevalar.add(\"Banan\");
+        mevalar.add(\"Anor\");
+
+        // Elementlarni chiqarish
+        for (String meva : mevalar) {
+            System.out.println(meva);
+        }
+
+        // Elementni olib tashlash
+        mevalar.remove(\"Banan\");
+
+        // Yangilangan ro'yxat
+        System.out.println(\"Yangi ro'yxat:\");
+        for (String meva : mevalar) {
+            System.out.println(meva);
+        }
+    }
+}
+</code></pre>
+
+<h2>6. Nima uchun ArrayList kerak?</h2>
+
+<p>
+  Quyidagi holatlarda <b>ArrayList</b> foydalidir:
+  <ul>
+    <li>Ro‘yxatdagi elementlar soni oldindan noma'lum bo‘lsa</li>
+    <li>Tez-tez element qo‘shish va o‘chirish zarurati bo‘lsa</li>
+    <li>Elementlar ustida ko‘p amallar (qidirish, sortlash) bajarish kerak bo‘lsa</li>
+    <li>Kengaytiriladigan dinamik tuzilmalar kerak bo‘lsa</li>
+  </ul>
+</p>
+
+<h2>7. E'tibor bering</h2>
+<ul>
+  <li>ArrayList faqat <b>obyektlar</b> saqlaydi. Agar siz son saqlamoqchi bo'lsangiz, <code>Integer</code>, <code>Double</code> kabi classlardan foydalanasiz (primitive tiplar emas).</li>
+  <li>ArrayList ichidagi elementlar tartibni saqlaydi (elementlar ketma-ket joylashadi).</li>
+  <li>Indeks orqali istalgan elementga tez kirish mumkin.</li>
+</ul>
+
+<h2>Xulosa</h2>
+
+<p>
+  Java'da <b>ArrayList</b> — bu oson, qulay va kuchli dinamik massiv alternativasidir. Uning yordamida dasturda ro'yxat bilan ishlash osonlashadi, ma'lumot qo‘shish, o‘chirish va yangilash tez amalga oshiriladi. <br><br>
+  O'rta va yirik loyihalarda massiv o‘rniga ko‘pincha aynan <b>ArrayList</b> ishlatiladi.
+</p>
+
+</body>
+</html>

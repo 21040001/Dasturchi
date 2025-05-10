@@ -13,6 +13,7 @@ import MyBookPage from "../Pages/MyBookPage";
 import JavaCompilerPage from "../Pages/JavaCompilerPage";
 import SignIn from "../Components/Signs/SignIn";
 import SignUp from "../Components/Signs/SignUp";
+import Diabet from "../Components/ProjectLive";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />}/>
           <Route path="/JavaCompiler" element={<JavaCompilerPage />} />
+          <Route path="/diabet" element={<Diabet />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

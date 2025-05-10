@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Kalit So'zlari</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #3df30b;
+        }
+
+        .keyword {
+            font-weight: bold;
+            color: #0df489;
+        }
+
+        .description {
+            margin: 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        pre {
+            background-color: #3f3c3c;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+            color: #fff;
+        }
+
+        th {
+            background-color: #070707;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Java Kalit So'zlari</h1>
+
+    <div class="description">
+        <span class="keyword">public</span> kalit so'zi:
+        <p>Bu kalit so'zi sinfdagi o'zgaruvchilarga va metodlarga tashqi sinflardan, hatto boshqa paketlardan ham
+            erishish imkonini beradi. Har bir kishi bu resurslarga to'liq kirish huquqiga ega bo'ladi.
+            <strong>Masalan:</strong> <code>public int age;</code></p>
+    </div>
+
+    <div class="description">
+        <span class="keyword">private</span> kalit so'zi:
+        <p>Bu kalit so'zi sinfdagi o'zgaruvchilar va metodlarga faqat shu sinf ichidan murojaat qilish imkonini beradi.
+            Boshqa sinflardan yoki paketlardan bu resurslarga kirish mumkin emas. <strong>Masalan:</strong>
+            <code>private String name;</code></p>
+    </div>
+
+    <div class="description">
+        <span class="keyword">protected</span> kalit so'zi:
+        <p>Bu kalit so'zi faqat shu sinf va uning vorislaridan (subclass) foydalanishga imkon beradi. Bundan tashqari,
+            bir xil paketdagi sinflar ham foydalanishi mumkin. <strong>Masalan:</strong>
+            <code>protected int salary;</code></p>
+    </div>
+
+    <h2>Kalit So'zlarning Taqqoslanishi</h2>
+    <table>
+        <tr>
+            <th>Kalit So'z</th>
+            <th>Xuddi Shu Sinf</th>
+            <th>Xuddi Shu Paket</th>
+            <th>Voris Sinf (Subclass)</th>
+            <th>Tashqi Sinf (Boshqa Paket)</th>
+        </tr>
+        <tr>
+            <td>public</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>protected</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>❌ (Agar voris bo‘lmasa)</td>
+        </tr>
+        <tr>
+            <td>no modifier (default)</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>❌</td>
+            <td>❌</td>
+        </tr>
+        <tr>
+            <td>private</td>
+            <td>✅</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>❌</td>
+        </tr>
+    </table>
+
+    <h2>Misollar</h2>
+    <h3>public kalit so'zi:</h3>
+    <pre>
+        <code>
+        public class Person {
+            public String name; // public o'zgaruvchi
+            
+            public void setName(String name) { // public metod
+                this.name = name;
+            }
+        }
+
+        public class Main {
+            public static void main(String[] args) {
+                Person p = new Person();
+                p.setName("Ali");
+                System.out.println(p.name);
+            }
+        }
+        </code>
+    </pre>
+
+    <h3>private kalit so'zi:</h3>
+    <pre>
+        <code>
+        public class Person {
+            private String name; // private o'zgaruvchi
+
+            public void setName(String name) { // public metod
+                this.name = name;
+            }
+
+            public String getName() { // public metod
+                return this.name;
+            }
+        }
+
+        public class Main {
+            public static void main(String[] args) {
+                Person p = new Person();
+                p.setName("Ali");
+                System.out.println(p.getName()); // private o'zgaruvchiga public metod orqali murojaat
+            }
+        }
+        </code>
+    </pre>
+
+    <h3>protected kalit so'zi:</h3>
+    <pre>
+        <code>
+        public class Employee {
+            protected String position; // protected o'zgaruvchi
+        }
+
+        public class Manager extends Employee {
+            public void setPosition(String position) {
+                this.position = position;
+            }
+        }
+
+        public class Main {
+            public static void main(String[] args) {
+                Manager m = new Manager();
+                m.setPosition("Manager");
+                System.out.println(m.position); // protected o'zgaruvchiga voris sinfdan murojaat
+            }
+        }
+        </code>
+    </pre>
+</body>
+
+</html>

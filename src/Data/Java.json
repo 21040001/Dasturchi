@@ -27,6 +27,7 @@
       "documents": [
         { "id": "Sinflar", "Body": "page9.html" },
         { "id": "Ob'yektlar", "Body": "page10.html" },
+        { "id": "Java kalit so'zlar", "Body": "page25.html" },
         { "id": "New operatori", "Body": "page11.html" },
         { "id": "Metodlar", "Body": "page12.html" },
         { "id": "Metod Overloading", "Body": "page19.html" },

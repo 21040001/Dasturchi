@@ -45,12 +45,12 @@ function Diabet() {
     setPrediction(null);
     e.preventDefault();
     const valuesOnly = Object.values(features).map(val => Number(val));
-    const trimmedValues = valuesOnly.slice(0, -1); // oxirgi elementni olib tashlaydi
-    console.log(trimmedValues);
+    /*const trimmedValues = valuesOnly.slice(0, -1); // oxirgi elementni olib tashlaydi*/
+    console.log(valuesOnly);
 
     try {
       const response = await axios.post('https://diabetapi.onrender.com/predict', {
-        features: trimmedValues
+        features: valuesOnly
       }, {
         headers: {
           'Content-Type': 'application/json'

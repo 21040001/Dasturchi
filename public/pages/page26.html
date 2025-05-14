@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Regex Tushuntirish</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        line-height: 1.7;
+        padding: 20px;
+    }
+    h1 {
+        color: #0a8043;
+    }
+    h2 {
+        color: #1266f1;
+        margin-top: 30px;
+    }
+    pre {
+        background-color: #3f3c3c;
+        padding: 10px;
+        border-radius: 5px;
+        overflow: auto;
+        color: #fff;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 10px;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+    }
+    code {
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+    ul {
+        margin-left: 20px;
+    }
+    </style>
+</head>
+<body>
+
+<h1>Java Regex (Regular Expression) Tushuntirish</h1>
+
+<h2> 1. Regex nima?</h2>
+<p><strong>Regex</strong> — bu matndan ma’lum bir strukturani aniqlash yoki tekshirish uchun ishlatiladigan ifoda.</p>
+
+<h3>Misollar:</h3>
+<ul>
+    <li>Email: <code>^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$</code></li>
+    <li>Faqat raqam: <code>^\\d+$</code></li>
+    <li>Telefon raqami: <code>^\\+998\\d{9}$</code></li>
+</ul>
+
+<h2> 2. Java’da Regex ishlatish</h2>
+
+<h3> String.matches()</h3>
+<pre><code>String s = "abc123";
+boolean mos = s.matches("[a-z]+\\d+"); // true
+</code></pre>
+
+<h3> Pattern va Matcher</h3>
+<pre><code>import java.util.regex.*;
+
+public class TestRegex {
+    public static void main(String[] args) {
+        String text = "Kod: AB1234";
+        Pattern pattern = Pattern.compile("[A-Z]{2}\\d{4}");
+        Matcher matcher = pattern.matcher(text);
+
+        if (matcher.find()) {
+            System.out.println("Topildi: " + matcher.group()); // AB1234
+        }
+    }
+}
+</code></pre>
+
+<h2> 3. Regex belgilari</h2>
+
+<h3> Belgilar:</h3>
+<table>
+    <tr><th>Belgi</th><th>Ma’nosi</th><th>Misol</th></tr>
+    <tr><td>.</td><td>Har qanday 1 belgi</td><td>a, 5, !</td></tr>
+    <tr><td>\\d</td><td>Raqam (0-9)</td><td>3, 9</td></tr>
+    <tr><td>\\w</td><td>Harf/raqam/_</td><td>a, 9, _</td></tr>
+    <tr><td>\\s</td><td>Bo‘sh joy (space, tab)</td><td></td></tr>
+    <tr><td>^</td><td>Matn boshi</td><td>^abc</td></tr>
+    <tr><td>$</td><td>Matn oxiri</td><td>abc$</td></tr>
+</table>
+
+<h3> Takrorlanish belgilar:</h3>
+<table>
+    <tr><th>Belgi</th><th>Ma’nosi</th><th>Misol</th></tr>
+    <tr><td>*</td><td>0 yoki ko‘p marta</td><td>a*</td></tr>
+    <tr><td>+</td><td>1 yoki ko‘p marta</td><td>a+</td></tr>
+    <tr><td>?</td><td>0 yoki 1 marta</td><td>a?</td></tr>
+    <tr><td>{n}</td><td>Aynan n marta</td><td>a{3}</td></tr>
+    <tr><td>{n,m}</td><td>n dan m gacha</td><td>a{2,4}</td></tr>
+</table>
+
+<h2> 4. Amaliy misollar</h2>
+
+<h3> Faqat raqamlar:</h3>
+<pre><code>String s = "123456";
+System.out.println(s.matches("\\d+")); // true
+</code></pre>
+
+<h3> Email tekshirish:</h3>
+<pre><code>String email = "user123@mail.com";
+System.out.println(email.matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$")); // true
+</code></pre>
+
+<h3> Telefon raqami:</h3>
+<pre><code>String tel = "+998901234567";
+System.out.println(tel.matches("^\\+998\\d{9}$")); // true
+</code></pre>
+
+<h3> Kuchli parol (katta harf va raqam):</h3>
+<pre><code>String parol = "Java2023";
+System.out.println(parol.matches("^(?=.*[A-Z])(?=.*\\d).{8,}$")); // true
+</code></pre>
+
+<h2> 5. Almashtirish va ajratish</h2>
+
+<h3> replaceAll:</h3>
+<pre><code>String s = "Salom123Dunyo";
+String result = s.replaceAll("\\d", "*"); // Salom***Dunyo
+</code></pre>
+
+<h3> split:</h3>
+<pre><code>String s = "java,python,c++";
+String[] t = s.split(","); // [java, python, c++]
+</code></pre>
+
+
+<h2> 6. Xulosa</h2>
+
+<table>
+    <tr><th>Maqsad</th><th>Regex</th></tr>
+    <tr><td>Faqat raqam (5 ta)</td><td>^\\d{5}$</td></tr>
+    <tr><td>Email</td><td>^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$</td></tr>
+    <tr><td>Kuchli parol</td><td>^(?=.*[A-Z])(?=.*\\d).{8,}$</td></tr>
+    <tr><td>Telefon (O‘zbekiston)</td><td>^\\+998\\d{9}$</td></tr>
+</table>
+
+</body>
+</html>

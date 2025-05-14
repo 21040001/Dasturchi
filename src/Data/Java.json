@@ -39,6 +39,13 @@
         { "id": "Abstraktsiya", "Body": "page17.html" },
         { "id": "Interfeyslar", "Body": "page18.html" }
       ]
+    },
+    {
+      "collectionName": "Qo'shimcha ma'lumotlar", 
+      "documents": [
+        { "id": "RegEx", "Body": "page26.html" }
+        
+      ]
     }
   ]
 }
